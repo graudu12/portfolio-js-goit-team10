@@ -1,3 +1,5 @@
+@import url('./base.css');
+@import url('./container.css');
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
@@ -9,5 +11,3 @@
 @import url('./reviews.css');
 @import url('./footer.css');
 @import url('./modal-window.css');
-@import url('./base.css');
-@import url('./container.css');
