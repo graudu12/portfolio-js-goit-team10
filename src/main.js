@@ -1,3 +1,10 @@
+
+import Accordion from 'accordion-js';
+
+import Swiper from 'swiper';
+import 'swiper/css';
+import axios from 'axios';
+
 import Accordion from 'accordion-js';
 import "accordion-js/dist/accordion.min.css";
 import Swiper from 'swiper';
