@@ -1,5 +1,5 @@
 
-import Accordion from 'accordion-js';
+
 
 import Swiper from 'swiper';
 import 'swiper/css';
