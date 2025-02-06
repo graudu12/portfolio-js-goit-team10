@@ -1,10 +1,10 @@
-
+/*reviews-section styles LENA BOKHAN*/
 
 import iziToast from "izitoast";
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import axios from 'axios';
-const swiperWrapper = document.querySelector(".swiper-wrapper");
+const swiperWrapper = document.querySelector(".wrap-card");
 console.log(swiperWrapper);
 
 const loaderEl = document.querySelector('.loader');
@@ -36,7 +36,7 @@ const onScroll = async () => {
             swiperWrapper.innerHTML = galleryTemplate;
         swiper.update();
             hideLoader();
-        }catch (err) {
+        } catch (err) {
             hideLoader();
             iziToast.show({
                 backgroundColor: 'linear-gradient(90deg, #1c1d20 49.68%, #9f3626 67.73%, #e6533c 100%)',
@@ -45,7 +45,7 @@ const onScroll = async () => {
                 close: 'true',
             });
 
-            searchReviewsSection.innerHTML = "<p>Not found</p>";
+            searchReviewsSection.innerHTML = '<p class ="error-title">Not found</p>';
             return;
         } finally { hideLoader(); }
     };
@@ -79,20 +79,29 @@ const swiper = new Swiper('.swiper-reviews', {
     },
     pagination: {
             el: '.swiper-pagination-rev',
-            clickable: true,
+        clickable: true,
+            
     },
     spaceBetween: 16,  
-    slidesPerView: "auto",
+    
+    slidesPerView: 1, 
+    breakpoints: {
+        768: { 
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+       
+        1440: { 
+            slidesPerView: 4,
+            spaceBetween: 32
+        }
+    },
     keyboard: {
         enabled: true,
         pageUpDown: true,
     },
-  loop: false,
-   
-  
+    loop: false,  
 });
-
-
 
 
 
