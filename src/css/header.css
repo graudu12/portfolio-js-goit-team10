@@ -118,20 +118,24 @@ color: var(--main-text);
 }
 
 /* Мобільне меню */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1001;
-  padding: 20px;
-}
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9) url('/img/desktop/background-hero.png') no-repeat center center;
+        background-size: cover;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        padding: 20px;
+      }
+      
+
 
 .mobile-menu.active {
   display: flex;
