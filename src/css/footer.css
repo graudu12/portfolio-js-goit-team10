@@ -1,2 +1,68 @@
+.work-together-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.work-together-logo {
+  display: inline;
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  vertical-align: middle;
+}
+.work-together-section-title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
 
-  
+  margin-bottom: 63px;
+}
+.contact-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.input-last-section {
+  color: #fafafa;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fafafa33;
+  outline: none;
+  padding: 18px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+.input-last-section:focus {
+  border-bottom: 2px solid #fafafa80;
+  box-shadow: none;
+  background-color: transparent;
+}
+.input-last-section:valid {
+  background-color: transparent;
+  border-bottom: 2px solid #3cbc81;
+}
+
+.contact-form-btn {
+  background-color: #e6533c;
+  color: #fafafa;
+  width: 100px;
+  height: 100px;
+  margin-top: 32px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+.contact-info {
+  margin-top: 64px;
+  display: flex;
+  gap: 4px;
+}
+.contact-info-item {
+  font-size: 14px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+}
