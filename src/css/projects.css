@@ -162,7 +162,7 @@
 
 /* Styles for Desktop devices */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1440px) {
   .projects-list-item {
     max-width: 1376px;
     flex-direction: row;
