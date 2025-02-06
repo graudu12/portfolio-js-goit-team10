@@ -55,7 +55,7 @@ letter-spacing: -0.02em;
     
 color: var(--main-text);
     position: relative;
-    text-decoration: underline; /* Підкреслення завжди */
+    text-decoration: underline; 
   }
   
 
@@ -78,9 +78,10 @@ color: var(--main-text);
 
 .nav-list {
   display: flex;
+  margin-top: 15px;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   list-style: none;
   padding: 0;
   
@@ -125,7 +126,7 @@ color: var(--main-text);
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.9) url('/img/desktop/background-hero.png') no-repeat center center;
+        background: rgba(0, 0, 0, 0.9) url('/img/hero/hero1xmob.jpg') no-repeat center center;
         background-size: cover;
         display: none;
         flex-direction: column;
@@ -214,6 +215,54 @@ color: var(--main-text);
   height: 2px;
   background-color: white;
 }
+
+/* Ховери та фокуси */
+
+.order-btn:hover,
+.order-btn:focus {
+  background: #f3eeee; 
+  
+}
+
+.order-btn-mobile:hover,
+.order-btn-mobile:focus {
+  background: #f6f3f3; 
+ 
+}
+
+a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  a:hover,
+  a:focus {
+    color: #e0373f;; 
+    text-decoration: underline;
+  }
+  
+  /* Посилання в меню */
+  .nav-list li a,
+  .mobile-nav a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .nav-list li a:hover,
+  .nav-list li a:focus,
+  .mobile-nav a:hover,
+  .mobile-nav a:focus {
+    color: #e0373f;
+    text-decoration: underline;
+  }
+  
+  /* Кнопки */
+  button,
+  .menu-toggle,
+  .order-btn,
+  .order-btn-mobile {
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  }
+  
+  
 
 /* Медіа-запити для адаптації */
 @media (max-width: 768px) {
