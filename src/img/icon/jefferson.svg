@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="jefferson-text" viewBox="0 0 300 100">
+      <text x="10" y="60" font-size="50" font-family="Arial" fill="white">jefferson*</text>
+    </symbol>
+  </defs>
+</svg>
