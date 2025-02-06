@@ -1,6 +1,4 @@
 @import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/scrollbar';
 
 /* Styles for Mobile devices */
 
@@ -92,7 +90,6 @@
   gap: 12px;
   margin-top: 32px;
 }
-
 .projects-swiper-button-prev,
 .projects-swiper-button-next {
   position: static;
@@ -105,10 +102,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
-.arrow-button-left {
+.projects-swiper-button-prev .arrow-button-left {
   transform: scaleX(-1);
+  stroke: #fafafa;
+}
+
+.projects-swiper-button-disabled {
+  border: 1px solid #fafafa33;
+  color: #3b3b3b;
 }
 
 /* Styles for Tablet devices */
