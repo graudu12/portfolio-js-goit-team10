@@ -7,7 +7,7 @@
 //import iziToast from 'izitoast';
 //import 'izitoast/dist/css/iziToast.min.css';
 
-//import './js/header.js';
+import './js/header.js';
 //import './js/api.js';
 // import './js/about.js';
 // import './js/projects.js';

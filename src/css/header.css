@@ -1,211 +1,235 @@
+.container-header {
+  display: flex;
 
-.container-header{
-    display: flex
-    ;
-        justify-content: space-between;
-        padding: 16px;
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
-        align-items: baseline;
+  align-items: flex-start;
+
+  justify-content: space-between;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+/* Логотип */
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Текст лого */
+.logo__text {
+  position: absolute;
+  top: 0;
+  right: -90px; /* Відступ праворуч, щоб текст не налазив на лого */
+  transform: scale(1.5);
 }
 
 .logo img {
-    height: 80px;
-  }
-  
-  /* Меню контейнер */
-  .menu-container {
+  height: 80px;
+}
+
+/* Меню контейнер */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Головне меню (десктоп) */
+
+/* Кнопка меню на десктопі */
+
+  /* Кнопка меню */
+.menu-toggle {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+font-weight: 500;
+font-size: 16px;
+letter-spacing: -0.02em;
+    
+color: var(--main-text);
     position: relative;
+    text-decoration: underline; /* Підкреслення завжди */
   }
   
-  /* Головне меню (десктоп) */
+
+
+/* Десктопне меню з анімацією */
+.nav {
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+ 
+}
+
+.nav.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
   
-  /* Кнопка меню на десктопі */
-  .menu-toggle {
-    display: flex;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    color: black;
-  }
+}
+
+.nav-list li a {
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Кнопка "Order the project" */
+.order-btn {
+  background: #e0373f;
+  color: white;
+  text-decoration: none;
+  border-radius: 60px;
+  padding: 18px 24px;
+}
+
+/* Бургер-меню (тільки мобільна версія) */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background: rgb(248, 246, 246);
+}
+
+/* Мобільне меню */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  padding: 20px;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* Кнопка закриття мобільного меню */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Кнопка "Order the project" у мобільному меню */
+.order-btn-mobile {
+  position: absolute;
+  bottom: 40px;
+  padding: 14px 24px;
+  background: #e0373f;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+/* Загальні стилі для header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   
-  /* Десктопне меню з анімацією */
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav li {
+  list-style: none; /* Прибирає крапки перед списком */
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+.mobile-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+/* Медіа-запити для адаптації */
+@media (max-width: 768px) {
   .nav {
-    display: flex;
-    gap: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0s 0.5s;
+    display: none;
   }
-  
-  .nav.active {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s ease;
-  }
-  
-  .nav-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .nav-list li a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  
-  /* Кнопка "Order the project" */
+
   .order-btn {
-    background: #e0373f;
-    color: white;
-    text-decoration: none;
-    border-radius: 60px;
-    padding: 18px 24px;
+    display: none;
   }
-  
-  /* Бургер-меню (тільки мобільна версія) */
+
   .burger-menu {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
+    display: flex;
   }
-  
-  .burger-menu span {
-    width: 25px;
-    height: 3px;
-    background: black;
-  }
-  
-  /* Мобільне меню */
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1001;
-    padding: 20px;
-  }
-  
+
   .mobile-menu.active {
     display: flex;
   }
-  
-  .mobile-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .mobile-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-  }
-  
-  /* Кнопка закриття мобільного меню */
-  .close-menu {
-    position: absolute;
-    top: 20px;
-    right: 60px;
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-  /* Кнопка "Order the project" у мобільному меню */
-  .order-btn-mobile {
-    position: absolute;
-    bottom: 40px;
-    padding: 14px 24px;
-    background: #e0373f;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    margin-bottom: 40px;
-  }
-  
-  /* Загальні стилі для header */
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .mobile-nav li {
-    list-style: none; /* Прибирає крапки перед списком */
-  }
-  
-  .mobile-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-    padding-bottom: 4px;
-    display: inline-block;
-  }
-  
-  .mobile-nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-  }
-  
-  /* Медіа-запити для адаптації */
-  @media (max-width: 768px) {
-    .nav {
-      display: none;
-    }
-  
-    .order-btn {
-      display: none;
-    }
-  
-    .burger-menu {
-      display: flex;
-    }
-  
-    .mobile-menu.active {
-      display: flex;
-    }
-    
-    .menu-toggle {
-      display: none;
-    }
-  }
-  
 
-
+  .menu-toggle {
+    display: none;
+  }
+}
