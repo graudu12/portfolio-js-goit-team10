@@ -1,12 +1,11 @@
 import Swiper from 'swiper';
-import { Navigation, Keyboard, Scrollbar } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Keyboard, Scrollbar],
-
+  modules: [Navigation, Keyboard],
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.projects-swiper-button-next',
+    prevEl: '.projects-swiper-button-prev',
   },
   spaceBetween: 32,
   slidesPerView: 'auto',
@@ -20,7 +19,6 @@ const swiper = new Swiper('.swiper', {
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Tab') {
     event.preventDefault();
-
     if (event.shiftKey) {
       swiper.slidePrev();
     } else {
@@ -33,7 +31,7 @@ document
   .querySelector('.projects-button')
   .addEventListener('click', function () {
     window.open(
-      'https://github.com/graudu12/portfolio-js-goit-team10/',
+      'https://github.com/graudu12/portfolio-js-goit-team10',
       '_blank'
     );
   });

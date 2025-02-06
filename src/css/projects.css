@@ -85,7 +85,7 @@
   overflow: hidden;
 }
 
-.swiper-navigation {
+.projects-swiper-navigation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,8 +93,8 @@
   margin-top: 32px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.projects-swiper-button-prev,
+.projects-swiper-button-next {
   position: static !important;
   width: 52px;
   height: 52px;
@@ -109,8 +109,8 @@
   transition: 0.3s;
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.projects-swiper-button-prev::after,
+.projects-swiper-button-next::after {
   font-size: 20px;
   color: #fafafa80;
 }
