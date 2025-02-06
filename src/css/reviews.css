@@ -1,0 +1,104 @@
+/*reviews-section styles LENA BOKHAN*/
+@import 'izitoast/dist/css/iziToast.min.css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fafafa;
+  border-bottom-color: #e6533c;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  display: none;
+  margin: auto;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.reviews-section {
+  padding: 64px 16px;
+}
+.reviews-title {
+  margin-left: 0;
+  margin: top 0;
+  font-weight: 600;
+
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+
+.swiper-reviews {
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+}
+.review-img {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+}
+.swipe-review {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 332px;
+}
+.reviews-author {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+.info-review {
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+.swiper-button-prev-rev,
+.swiper-button-next-rev {
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  gap: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev-rev::after,
+.swiper-button-next-rev::after {
+  fill: none;
+  stroke: #fafafa;
+  width: 24px;
+  height: 24px;
+}
+
+.swiper-button-prev-rev.swiper-button-disabled::after,
+.swiper-button-next-rev.swiper-button-disabled::after {
+  fill: none;
+  stroke: #3b3b3b;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.swiper-button-prev-rev.swiper-button-disabled,
+.swiper-button-next-rev.swiper-button-disabled {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  opacity: 0.5;
+  pointer-events: none;
+}
