@@ -1,15 +1,13 @@
-
-.container {
+/*.container {
 width: 100%;
 margin: 0 auto;
-}
+}*/
 .section {
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 padding: 281px 16px 32px 16px;
 width: 100%px;
-height: 100vh;
 background-color: #1C1D20;
 height: 100vh;
 background-image: url('../img/hero/hero1xmob.jpg');
@@ -168,22 +166,15 @@ color: #fff;
 width: 154px;
 height: 17px;
 }  
-
-
 @media screen and (min-width: 375px) {
-.container {
-width: 100%;
-margin: 0 auto;
-}
 .section {
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 padding: 281px 16px 32px 16px;
-width: 375px;
-height: 100vh;
+min-width: 375px;
+height: 812px;
 background-color: #1C1D20;
-height: 100vh;
 background-image: url('../img/hero/hero1xmob.jpg');
 background-size: 100% 100%; 
 background-repeat: no-repeat; 
@@ -215,8 +206,6 @@ border-radius: 60px;
 padding: 10px 12px;
 width: 37px;
 height: 37px;
-display: flex;
-align-items: center;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 transition: box-shadow 0.6s ease, transform 0.5s ease;
 }
@@ -235,12 +224,13 @@ padding: 10px;
 width: 37px;
 height: 37px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-transition: box-shadow 0.6s ease;
+transition: box-shadow 0.6s ease, transform 0.5s ease;
 }
 .li-two:hover,
 .li-two:focus {
 cursor: pointer;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+transform: scale(1.1);
 }
 .li-three {
 border: 1px solid rgba(250, 250, 250, 0.2);
@@ -251,12 +241,13 @@ height: 37px;
 display: flex;
 align-items: center;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-transition: box-shadow 0.6s ease;
+transition: box-shadow 0.6s ease, transform 0.5s ease;
 }
 .li-three:hover,
 .li-three:focus {
 cursor: pointer;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+transform: scale(1.1);
 }
 .li-four {
 border: 1px solid rgba(250, 250, 250, 0.2);
@@ -267,12 +258,13 @@ height: 37px;
 display: flex;
 align-items: center;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-transition: box-shadow 0.6s ease;
+transition: box-shadow 0.6s ease, transform 0.5s ease;
 }
 .li-four:hover,
 .li-four:focus {
 cursor: pointer;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+transform: scale(1.1);
 }
 .li-five {
 border: 1px solid rgba(250, 250, 250, 0.2);
@@ -284,12 +276,13 @@ display: flex;
 align-items: center;
 justify-content: center;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-transition: box-shadow 0.6s ease;
+transition: box-shadow 0.6s ease, transform 0.5s ease;
 }
 .li-five:hover,
 .li-five:focus {
 cursor: pointer;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+transform: scale(1.1);
 }
 .a {
 font-family: var(--font-family);
@@ -341,29 +334,115 @@ width: 154px;
 height: 17px;
 }  
 }
+
 @media screen and (min-width: 768px) {
-.container {
-width: 100%;
-margin: 0 auto;
-}
 .section {
-padding: 300px 104px 32px 32px;
-width: 768px;
+padding: 300px 32px 32px 32px;
+min-width: 768px;
+height: 1024px;
 background-image: url('../img/hero/tabl.jpg');
 background-size: 90% 100%;
 }
 .title {
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 50px;
+font-size: 90px;
 line-height: 100%;
-letter-spacing: -0.03em;
-text-transform: uppercase;
-color: #fff;
 width: 632px;
 height: 450px;
-margin-top: 0;
 margin-bottom: 0;
 }
-
+.ul {
+width: 473px;
+gap: 8px;
+margin-left: 231px;
 }
+.li {
+padding: 18px 20px;
+width: 55px;
+height: 55px;
+}
+.li-two {
+padding: 18px 17px;
+width: 53px;
+height: 55px;
+}
+.li-three {
+padding: 18px;
+width: 55px;
+height: 55px;
+}
+.li-four {
+padding: 18px 16px;
+width: 55px;
+height: 55px;
+}
+.li-five {
+padding: 18px 24px;
+width: 223px;
+height: 55px;
+}
+.a {
+font-size: 16px;
+width: 15px;
+height: 19px;
+}
+.a-two {
+font-size: 16px;
+width: 19px;
+height: 19px;
+}
+.a-three {
+font-size: 16px;
+width: 20px;
+height: 19px;
+}
+.a-four {
+font-size: 16px;
+width: 23px;
+height: 19px;
+}
+.a-five {
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+letter-spacing: -0.02em;
+color: var(--main-text);
+width: 175px;
+height: 19px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+.section {
+min-width: 1440px;
+padding: 300px 32px 32px 178px;
+background-image: url('../img/hero/Herodecktop2x.jpg');
+}
+.title {
+width: 1084px;
+height: 270px;
+}
+.ul {
+margin-left: 758px;
+}
+.li:hover,
+.li:focus {
+box-shadow: 0 8px 16px rgba(244, 47, 47, 0.943);
+}
+.li-two:hover,
+.li-two:focus {
+box-shadow: 0 8px 16px rgba(244, 47, 47, 0.943);
+}
+.li-three:hover,
+.li-three:focus {
+box-shadow: 0 8px 16px rgba(244, 47, 47, 0.943);
+}
+.li-four:hover,
+.li-four:focus {
+box-shadow: 0 8px 16px rgba(244, 47, 47, 0.943);
+}
+.li-five:hover,
+.li-five:focus {
+box-shadow: 0 8px 16px rgba(244, 47, 47, 0.943);
+}
+}
+
