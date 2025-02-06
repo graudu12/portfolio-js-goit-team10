@@ -1,3 +1,7 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/scrollbar';
+
 /* Styles for Mobile devices */
 
 .projects-title {
@@ -105,6 +109,12 @@
   transition: 0.3s;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+  color: #fafafa80;
+}
+
 /* Styles for Tablet devices */
 
 @media only screen and (min-width: 768px) {
@@ -152,12 +162,6 @@
     height: 68px;
     padding: 18px;
   }
-
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    font-size: 20px;
-    color: #fafafa;
-  }
 }
 
 /* Styles for Desktop devices */
@@ -165,6 +169,7 @@
 @media only screen and (min-width: 1440px) {
   .projects-list-item {
     max-width: 1376px;
+    display: flex !important;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
