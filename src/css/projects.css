@@ -95,24 +95,20 @@
 
 .projects-swiper-button-prev,
 .projects-swiper-button-next {
-  position: static !important;
+  position: static;
   width: 52px;
   height: 52px;
   padding: 14px;
   background-color: transparent;
-  color: #fafafa;
   border: 1px solid #fafafa80;
   border-radius: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
 }
 
-.projects-swiper-button-prev::after,
-.projects-swiper-button-next::after {
-  font-size: 20px;
-  color: #fafafa80;
+.arrow-button-left {
+  transform: scaleX(-1);
 }
 
 /* Styles for Tablet devices */
