@@ -7,7 +7,7 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.02em;
-  color: #fafafa66;
+  color: rgba(250, 250, 250, 0.4);
   text-transform: uppercase;
   margin-bottom: 32px;
 }
@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fafafa;
+  background-color: var(--color-text);
   border-radius: 24px;
   border: none;
   overflow: hidden;
@@ -41,7 +41,7 @@
 
 .technologies-list-item {
   color: #1c1d20;
-  border: 1px solid #1c1d2033;
+  border: 1px solid var(--border-prj);
   border-radius: 60px;
   padding: 13px 18px 13px 18px;
   font-size: 16px;
@@ -53,7 +53,7 @@
 }
 
 .technologies-list-item:hover {
-  box-shadow: 0 8px 16px #e6533c;
+  box-shadow: 0 8px 16px var(--carrot);
   transform: scale(1.1);
 }
 
@@ -73,8 +73,8 @@
   padding: 13px 32px;
   border: none;
   border-radius: 60px;
-  background-color: #e6533c;
-  color: #fafafa;
+  background-color: var(--carrot);
+  color: var(--color-text);
   font-size: 16px;
   font-weight: 500;
   line-height: 19.36px;
@@ -92,7 +92,7 @@
 
 .projects-list-image-container {
   padding: 100px 16px;
-  background-color: #242527;
+  background-color: var(--bgr-card-prj);
   border: none;
   border-radius: 0 0 24px 24px;
   overflow: hidden;
@@ -112,7 +112,7 @@
   height: 52px;
   padding: 14px;
   background-color: transparent;
-  border: 1px solid #fafafa80;
+  border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
   display: flex;
   justify-content: center;
@@ -123,18 +123,18 @@
 
 .projects-swiper-button-prev:hover,
 .projects-swiper-button-next:hover {
-  box-shadow: 0 8px 16px #e6533c;
+  box-shadow: 0 8px 16px var(--carrot);
   transform: scale(1.1);
 }
 
 .projects-swiper-button-prev .arrow-button-left {
   transform: scaleX(-1);
-  stroke: #fafafa;
+  stroke: var(--color-text);
 }
 
 .projects-swiper-button-disabled {
-  border: 1px solid #fafafa33;
-  color: #3b3b3b;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  stroke: rgba(59, 59, 59, 1);
 }
 
 /* Styles for Tablet devices */
