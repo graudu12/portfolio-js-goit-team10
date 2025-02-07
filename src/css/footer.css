@@ -79,7 +79,7 @@ input:-webkit-autofill:active {
 .input-last-section:focus,
 .input-last-section:hover,
 .input-last-section:active {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); */
 }
 .contact-form-btn {
   background-color: #e6533c;
