@@ -95,9 +95,7 @@
 .projects-list-image-container {
   padding: 100px 16px;
   background-color: var(--bgr-card-prj);
-  border: none;
   border-radius: 0 0 24px 24px;
-  overflow: hidden;
 }
 
 .projects-swiper-navigation {
@@ -138,6 +136,9 @@
 
 .projects-swiper-button-disabled {
   border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.projects-swiper-button-disabled .arrow-button-left {
   stroke: rgba(59, 59, 59, 1);
 }
 
