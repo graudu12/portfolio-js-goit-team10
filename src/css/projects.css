@@ -23,6 +23,7 @@
 .swiper-projects {
   max-width: 343px;
   overflow: hidden;
+  padding-bottom: 64px;
 }
 
 .projects-list-item-container {
@@ -147,6 +148,7 @@
 @media only screen and (min-width: 768px) {
   .swiper-projects {
     max-width: 704px;
+    padding-bottom: 96px;
   }
 
   .projects-list-item-container {
@@ -201,6 +203,7 @@
 
   .swiper-projects {
     max-width: 1376px;
+    padding-bottom: 164px;
   }
 
   .projects-list-item-container {
