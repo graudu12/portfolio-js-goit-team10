@@ -3,8 +3,8 @@ import { Navigation, Keyboard } from 'swiper/modules';
 
 const projectSwiper = new Swiper('.swiper-projects', {
   modules: [Navigation, Keyboard],
-  spaceBetween: 64,
-  slidesPerView: 'auto',
+  spaceBetween: 32,
+  slidesPerView: 1,
   loop: false,
   navigation: {
     nextEl: '.projects-swiper-button-next',
@@ -15,6 +15,16 @@ const projectSwiper = new Swiper('.swiper-projects', {
   keyboard: {
     enabled: true,
     onlyInViewport: true,
+  },
+  breakpoints: {
+    768: {
+      // Для планшетів
+      slidesPerView: 1,
+    },
+    1440: {
+      // Для десктопів
+      slidesPerView: 1,
+    },
   },
 });
 
