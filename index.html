@@ -19,7 +19,7 @@
     <script type="module" crossorigin src="/portfolio-js-goit-team10/index.js"></script>
     <link rel="modulepreload" crossorigin href="/portfolio-js-goit-team10/assets/vendor-DRtIqfvQ.js">
     <link rel="stylesheet" crossorigin href="/portfolio-js-goit-team10/assets/vendor-CNsKelwJ.css">
-    <link rel="stylesheet" crossorigin href="/portfolio-js-goit-team10/assets/index-D1nv06ym.css">
+    <link rel="stylesheet" crossorigin href="/portfolio-js-goit-team10/assets/index-BCx0p61x.css">
   </head>
   <body>
     <header class="header">
@@ -297,16 +297,17 @@
   <div class="swiper swiper-reviews">
     <ul class="swiper-wrapper wrap-card"></ul>
     <div class="swiper-pagination swiper-pagination-rev"></div>
-
-    <div class="swiper-button-prev swiper-button-prev-rev">
-      <svg class="arr-btn-review">
-        <use href="/portfolio-js-goit-team10/assets/symbol-defs-Cp0Iry3n.svg#icon-arrow-narrow-left"></use>
-      </svg>
-    </div>
-    <div class="swiper-button-next swiper-button-next-rev">
-      <svg class="arr-btn-review">
-        <use href="/portfolio-js-goit-team10/assets/symbol-defs-Cp0Iry3n.svg#icon-arrow-narrow-right"></use>
-      </svg>
+    <div class="btn-rev-wraper">
+      <button class="swiper-button-prev swiper-button-prev-rev" type="button">
+        <svg class="arr-btn-review">
+          <use href="/portfolio-js-goit-team10/assets/symbol-defs-Cp0Iry3n.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <button class="swiper-button-next swiper-button-next-rev" type="button">
+        <svg class="arr-btn-review">
+          <use href="/portfolio-js-goit-team10/assets/symbol-defs-Cp0Iry3n.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
@@ -314,62 +315,65 @@
     </main>
     <!--============== Work together section (footer) ============== -->
 
-<section class="work-together-section container">
-  <h2 class="work-together-section-title">
-    <img
-      class="work-together-logo"
-      src="data:image/png;base64,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"
-      alt="dev-lloyd's logo"
-    />
-    Let’s <span class="them-color">work</span> together
-  </h2>
+<section class="work-together-section" id="work-together">
+  <div class="container">
+    <h2 class="work-together-section-title">
+      <img
+        class="work-together-logo"
+        src="data:image/png;base64,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"
+        alt="dev-lloyd's logo"
+      />
+      Let’s <span class="them-color">work</span> together
+    </h2>
 
-  <form class="contact-form" id="contactForm">
-    <input
-      class="input-last-section"
-      type="email"
-      id="email"
-      name="email"
-      required
-      pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-      placeholder="clients@gmail.com"
-      title="Enter a valid email address (example: user@gmail.com)"
-      aria-label="Email address"
-    />
-    <input
-      class="input-last-section"
-      type="text"
-      id="comments"
-      name="comments"
-      required
-      placeholder="comments"
-      aria-label="Add comments"
-    />
-    <button class="contact-form-btn" type="submit">Send</button>
-  </form>
-  <img
-    class="btn-background-decor"
-    src="./img/desktop/background-last-section.png 768w"
-    srcset="/portfolio-js-goit-team10/assets/background-last-section-DKbf6ql_.png 768w, <!-- ./img/desktop/background-last-section-desktop.png 1440w -->"
-    alt="background decoration"
-  />
-  <!-- contact-info -->
+    <form class="contact-form" id="contactForm">
+      <input
+        class="input-last-section"
+        type="email"
+        id="email"
+        name="email"
+        required
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        placeholder="clients@gmail.com"
+        title="Enter a valid email address (example: user@gmail.com)"
+        aria-label="Email address"
+      />
+      <input
+        class="input-last-section"
+        type="text"
+        id="comments"
+        name="comments"
+        required
+        placeholder="comments"
+        aria-label="Add comments"
+      />
+      <button class="contact-form-btn" type="submit">Send</button>
+    </form>
 
-  <div class="contact-info">
-    <a class="contact-info-item" href="#">lloydjefferson@gmail.com</a>
-    <a class="contact-info-item" href="#">+380 11 1111 11 11</a>
+    <!-- contact-info -->
+
+    <div class="contact-info">
+      <a class="contact-info-item" href="#">lloydjefferson@gmail.com</a>
+      <a class="contact-info-item" href="#">+380 11 1111 11 11</a>
+    </div>
   </div>
 </section>
 
-<!-- success Modal window -->
-<!-- 
-<div id="successModal" class="modal hidden">
-  <div class="modal-content">
-    <p>Request sent successfully!</p>
-    <button id="closeModal">OK</button>
+    <div class="modal-overlay" data-modal>
+  <div class="modal">
+    <button
+      class="modal-button-close button-close"
+      type="button"
+      data-modal-close
+    >
+      <svg class="close-icon" width="8" height="8">
+        <use href="/portfolio-js-goit-team10/assets/symbol-defs-Cp0Iry3n.svg#icon-icon-close"></use>
+      </svg>
+    </button>
+    <h3 class="modal-answer-title"></h3>
+    <p class="modal-answer-text"></p>
   </div>
-</div> -->
+</div>
 
-    
   </body>
 </html>
