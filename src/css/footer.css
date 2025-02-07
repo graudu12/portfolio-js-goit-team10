@@ -4,6 +4,22 @@
   padding-top: 32px;
   padding-bottom: 32px;
 }
+.work-together-section .container {
+  position: relative;
+}
+.work-together-section .container::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: -74px;
+  height: 560px;
+  width: 170px;
+  background-image: url('./img/desktop/background-last-section-mob.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
 .work-together-logo {
   display: inline;
   width: 44px;
@@ -27,17 +43,20 @@
 }
 .input-last-section {
   color: #fafafa;
-  background-color: transparent;
+  background-color: #1c1d20;
   border: none;
   border-bottom: 1px solid #fafafa33;
   outline: none;
   padding: 18px 0;
   width: 100%;
   font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .input-last-section::placeholder {
   color: #fafafa99;
 }
+
 .input-last-section:focus {
   border-bottom: 2px solid #fafafa80;
   box-shadow: none;
@@ -47,7 +66,21 @@
   background-color: transparent;
   border-bottom: 2px solid #3cbc81;
 }
-
+.input-last-section:invalid:not(:placeholder-shown) {
+  border-bottom: 2px solid #e6533c;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #1c1d20 inset !important;
+  -webkit-text-fill-color: #fafafa !important;
+}
+.input-last-section:focus,
+.input-last-section:hover,
+.input-last-section:active {
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); */
+}
 .contact-form-btn {
   background-color: #e6533c;
   color: #fafafa;
@@ -57,6 +90,17 @@
   border-radius: 50%;
   border: none;
   outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow, background-color, font-size, transform 0.8s ease,
+    transform 0.5s ease;
+}
+.contact-form-btn:focus,
+.contact-form-btn:hover,
+.contact-form-btn:active {
+  background-color: #cb4531;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+  font-size: 18px;
 }
 .contact-info {
   margin-top: 64px;
@@ -65,20 +109,23 @@
 }
 .contact-info-item {
   letter-spacing: -0.02em;
-  font-size: 14px;
-  border: 1px solid rgba(250, 250, 250, 0.2);
+  font-size: 13px;
+  border: 1px solid #fafafa33;
   border-radius: 60px;
   padding: 10px 12px;
-  transition: border 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border, box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 340px) {
+    font-size: 14px;
+  }
 }
 .contact-info-item:hover,
 .contact-info-item:focus,
 .contact-info-item:active {
   border: 1px solid #fafafa;
+  box-shadow: 1px 8px 10px 1px #e0373f;
 }
-.btn-background-decor {
-  display: none;
-}
+
 /* ----------========== tablet ==========---------- */
 
 @media screen and (min-width: 768px) {
@@ -86,6 +133,13 @@
     position: relative;
     padding-top: 80px;
     padding-bottom: 169px;
+  }
+  .work-together-section .container::after {
+    top: -74px;
+    right: -18px;
+    height: 630px;
+    width: 250px;
+    background-image: url('./img/desktop/background-last-section-tab.png');
   }
   .work-together-logo {
     width: 70px;
@@ -110,24 +164,6 @@
     height: 150px;
     margin-top: 0;
   }
-  /* .contact-form-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 200px;
-    width: 200px;
-    background-image: url('./img/desktop/background-last-section.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: translate(-50%, -50%); 
-    z-index: -1; 
-    opacity: 0.7; 
-  .contact-info {
-    margin-top: 18px;
-    gap: 8px;
-  } */
 
   .btn-background-decor {
     display: block;
@@ -153,9 +189,16 @@
 /* ----------========== Desktop ==========---------- */
 
 @media screen and (min-width: 1440px) {
-  .work-together-section.container {
+  .work-together-section .container {
     padding-left: 196px;
     padding-right: 196px;
+  }
+  .work-together-section .container::after {
+    top: -110px;
+    right: 0;
+    height: 680px;
+    width: 420px;
+    background-image: url('./img/desktop/background-last-section-desktop.png');
   }
   .input-last-section {
     max-width: 390px;
