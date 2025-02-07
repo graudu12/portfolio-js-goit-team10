@@ -26,12 +26,42 @@
           </div>
 
           <div class="projects-list-image-container">
-            <img
-              src="./img/desktop/expand-mind-dsk.jpg"
-              alt="photo-project-expand-mind"
-              width="614"
-              height="385"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./img/projects-cut/Portfolio-first.jpg    1x,
+                  ./img/projects-cut/Portfolio-first@2x.jpg 2x
+                "
+                width="614"
+                height="385"
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  ./img/projects-cut/Portfolio-first-tbl.jpg    1x,
+                  ./img/projects-cut/Portfolio-first-tbl@2x.jpg 2x
+                "
+                width="614"
+                height="385"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./img/projects-cut/Portfolio-first-m.jpg    1x,
+                  ./img/projects-cut/Portfolio-first-m@2x.jpg 2x
+                "
+                width="311"
+                height="195"
+                media="(max-width: 767px)"
+              />
+              <img
+                class="project-image"
+                src="./img/projects-cut/Portfolio-first-m.jpg"
+                alt="photo-project-expand-mind"
+                width="311"
+                height="195"
+              />
+            </picture>
           </div>
         </li>
         <li class="projects-list-item swiper-slide">
@@ -56,12 +86,42 @@
             <button class="projects-button" type="button">See project</button>
           </div>
           <div class="projects-list-image-container">
-            <img
-              src="./img/desktop/petlove-dsk.jpg"
-              alt="photo-project-petlove"
-              width="614"
-              height="385"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./img/desktop/petlove-dsk.jpg    1x,
+                  ./img/desktop/petlove-dsk@2x.jpg 2x
+                "
+                width="614"
+                height="385"
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  ./img/tablet/petlove-tb.jpg    1x,
+                  ./img/tablet/petlove-tb@2x.jpg 2x
+                "
+                width="614"
+                height="385"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./img/mobile/petlove-m.jpg    1x,
+                  ./img/mobile/petlove-m@2x.jpg 2x
+                "
+                width="311"
+                height="195"
+                media="(max-width: 767px)"
+              />
+              <img
+                class="project-image"
+                src="./img/mobile/petlove-m.jpg"
+                alt="photo-project-petlove"
+                width="311"
+                height="195"
+              />
+            </picture>
           </div>
         </li>
         <li class="projects-list-item swiper-slide">
@@ -86,12 +146,42 @@
             <button class="projects-button" type="button">See project</button>
           </div>
           <div class="projects-list-image-container">
-            <img
-              src="./img/desktop/register-dsk.jpg"
-              alt="photo-project-register"
-              width="614"
-              height="385"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./img/desktop/register-dsk.jpg    1x,
+                  ./img/desktop/register-dsk@2x.jpg 2x
+                "
+                width="614"
+                height="385"
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  ./img/tablet/register-tb.jpg    1x,
+                  ./img/tablet/register-tb@2x.jpg 2x
+                "
+                width="614"
+                height="385"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./img/mobile/register-m.jpg    1x,
+                  ./img/mobile/register-m@2x.jpg 2x
+                "
+                width="311"
+                height="195"
+                media="(max-width: 767px)"
+              />
+              <img
+                class="project-image"
+                src="./img/mobile/register-m.jpg"
+                alt="photo-project-register"
+                width="311"
+                height="195"
+              />
+            </picture>
           </div>
         </li>
       </ul>
