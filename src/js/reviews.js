@@ -5,16 +5,15 @@ import Swiper from 'swiper';
 /*import { Navigation, Pagination} from 'swiper/modules';*/
 import axios from 'axios';
 const swiperWrapper = document.querySelector(".wrap-card");
-console.log(swiperWrapper);
 
 const loaderEl = document.querySelector('.loader');
 let galleryTemplate;
 
-import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const swiper = new Swiper('.swiper-reviews', {
-    modules: [Navigation, Pagination, Keyboard, Mousewheel],
-
+    modules: [Navigation, Keyboard, Mousewheel],
+    loop: false,  // Отключаем бесконечную прокрутку
     // Управление клавиатурой
     keyboard: {
         enabled: true,
@@ -32,11 +31,7 @@ const swiper = new Swiper('.swiper-reviews', {
         nextEl: '.swiper-button-next-rev',
         prevEl: '.swiper-button-prev-rev',
     },
-    pagination: {
-         el: '.swiper-pagination-rev',
-        clickable: true,
-            
-    },
+    
 
     // Сенсорное управление (по умолчанию включено)
     simulateTouch: true,  // Включает сенсорные жесты на десктопе
@@ -51,17 +46,17 @@ const swiper = new Swiper('.swiper-reviews', {
         nextSlideMessage: 'Следующий слайд',
     },
 
-    loop: false,  // Отключаем бесконечную прокрутку
-    spaceBetween: 16,
+
+    
     slidesPerView: 1,
     breakpoints: {
         768: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 16,
         },
         1440: {
             slidesPerView: 4,
-            spaceBetween: 32,
+            spaceBetween: 16,
         }
     },
 });
@@ -98,11 +93,11 @@ const onScroll = async () => {
         if (!data || data.length === 0) {
             throw new Error("No data available");
         }
-            swiperWrapper.innerHTML = "";
-            galleryTemplate = data.map(createReviewCardTemplate).join("");
+        swiperWrapper.innerHTML = "";
+        galleryTemplate = data.map(createReviewCardTemplate).join("");
             
-            swiperWrapper.innerHTML = galleryTemplate;
-        swiper.update();
+        swiperWrapper.innerHTML = galleryTemplate;
+        setTimeout(() => { swiper.update(); }, 100);
             hideLoader();
         } catch (err) {
             hideLoader();
@@ -135,8 +130,8 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             showLoader();
-            onScroll();
-            observer.unobserve(entry.target);
+            onScroll().then(() => 
+            observer.unobserve(entry.target));
         }
     });
 }, { threshold: 1 });
