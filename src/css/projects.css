@@ -1,6 +1,4 @@
 @import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/scrollbar';
 
 /* Styles for Mobile devices */
 
@@ -9,28 +7,30 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.02em;
-  color: #fafafa66;
+  color: rgba(250, 250, 250, 0.4);
   text-transform: uppercase;
   margin-bottom: 32px;
 }
 
 .projects-list-item {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fafafa;
-  border-radius: 24px;
   border: none;
-  overflow: hidden;
+}
+
+.swiper-projects {
   max-width: 343px;
+  overflow: hidden;
+  padding-bottom: 64px;
 }
 
 .projects-list-item-container {
-  display: flex;
-  flex-direction: column;
   padding: 32px;
   text-align: left;
+  background-color: var(--color-text);
+  border-radius: 24px 24px 0 0;
 }
 
 .technologies-list {
@@ -43,7 +43,7 @@
 
 .technologies-list-item {
   color: #1c1d20;
-  border: 1px solid #1c1d2033;
+  border: 1px solid var(--border-prj);
   border-radius: 60px;
   padding: 13px 18px 13px 18px;
   font-size: 16px;
@@ -51,6 +51,13 @@
   line-height: 19.36px;
   letter-spacing: -0.02em;
   height: 45px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.6s ease, transform 0.5s ease;
+}
+
+.technologies-list-item:hover {
+  box-shadow: 0 8px 16px rgba(230, 67, 60, 0.8);
+  transform: scale(1.1);
 }
 
 .projects-list-title {
@@ -69,61 +76,84 @@
   padding: 13px 32px;
   border: none;
   border-radius: 60px;
-  background-color: #e6533c;
-  color: #fafafa;
+  background-color: var(--carrot);
+  color: var(--color-text);
   font-size: 16px;
   font-weight: 500;
   line-height: 19.36px;
   letter-spacing: -0.02em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.6s ease, transform 0.5s ease;
+}
+
+.projects-button:focus,
+.projects-button:hover {
+  background-color: #cb4531;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
 }
 
 .projects-list-image-container {
   padding: 100px 16px;
-  background-color: #242527;
-  border: none;
+  background-color: var(--bgr-card-prj);
   border-radius: 0 0 24px 24px;
-  overflow: hidden;
 }
 
-.swiper-navigation {
+.projects-swiper-navigation {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   margin-top: 32px;
 }
-
-.swiper-button-prev,
-.swiper-button-next {
-  position: static !important;
+.projects-swiper-button-prev,
+.projects-swiper-button-next {
+  position: static;
   width: 52px;
   height: 52px;
   padding: 14px;
   background-color: transparent;
-  color: #fafafa;
-  border: 1px solid #fafafa80;
+  border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.6s ease, transform 0.5s ease;
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 20px;
-  color: #fafafa80;
+.projects-swiper-button-prev:hover,
+.projects-swiper-button-next:hover {
+  box-shadow: 0 8px 16px rgba(230, 67, 60, 0.8);
+  transform: scale(1.1);
+}
+
+.arrow-button-left {
+  fill: var(--color-text);
+  transform: scaleX(-1);
+  stroke: var(--color-text);
+}
+
+.projects-swiper-button-disabled {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.projects-swiper-button-disabled .arrow-button-left {
+  stroke: rgba(59, 59, 59, 1);
 }
 
 /* Styles for Tablet devices */
 
 @media only screen and (min-width: 768px) {
-  .projects-list-item {
+  .swiper-projects {
     max-width: 704px;
+    padding-bottom: 96px;
   }
 
   .projects-list-item-container {
     padding: 64px;
+    min-width: 704px;
   }
 
   .technologies-list {
@@ -151,13 +181,13 @@
     padding: 120px 45px;
   }
 
-  .swiper-navigation {
+  .projects-swiper-navigation {
     gap: 20px;
     margin-top: 64px;
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
+  .projects-swiper-button-prev,
+  .projects-swiper-button-next {
     width: 68px;
     height: 68px;
     padding: 18px;
@@ -168,11 +198,17 @@
 
 @media only screen and (min-width: 1440px) {
   .projects-list-item {
-    max-width: 1376px;
-    display: flex !important;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  }
+
+  .swiper-projects {
+    max-width: 1376px;
+    padding-bottom: 164px;
+  }
+
+  .projects-list-item-container {
+    border-radius: 24px 0 0 24px;
+    min-width: 688px;
   }
 
   .technologies-list {
