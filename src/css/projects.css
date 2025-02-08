@@ -124,23 +124,23 @@
 }
 
 .projects-swiper-button-prev:hover,
-.projects-swiper-button-next:hover {
+.projects-swiper-button-next:hover,
+.projects-swiper-button-prev:focus,
+.projects-swiper-button-next:focus {
   box-shadow: 0 8px 16px rgba(230, 67, 60, 0.8);
   transform: scale(1.1);
 }
 
 .arrow-button-left {
-  fill: var(--color-text);
   transform: scaleX(-1);
-  stroke: var(--color-text);
 }
 
 .projects-swiper-button-disabled {
   border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.projects-swiper-button-disabled .arrow-button-left {
-  stroke: rgba(59, 59, 59, 1);
+.projects-swiper-button-disabled use {
+  --color1: rgba(59, 59, 59, 1);
 }
 
 /* Styles for Tablet devices */
