@@ -1,3 +1,4 @@
+
 import Accordion from "accordion-js";
 
 import Swiper from 'swiper';
@@ -42,5 +43,4 @@ new Accordion(".accordion-container-about-me", {
     }
   }
  });
-
 
