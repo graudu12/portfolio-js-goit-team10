@@ -207,11 +207,6 @@ a {
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-a:hover,
-a:focus {
-  color: #e0373f;
-  text-decoration: underline;
-}
 
 .nav-list li a,
 .mobile-nav a {
