@@ -80,9 +80,11 @@ input:-webkit-autofill:active {
   -webkit-outline: inherit !important;
   -webkit-background-clip: padding-box !important;
 } */
+
 .input-work-together-section:focus,
 .input-work-together-section:hover,
 .input-work-together-section:active {
+
   border-bottom: 2px solid #fafafa;
   background-image: linear-gradient(
     to top,
