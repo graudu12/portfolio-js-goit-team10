@@ -25,3 +25,5 @@ let animationCovers = entries => {
 
 let observer = new IntersectionObserver(animationCovers, options);
 observer.observe(section.covers);
+observer.observe(section.covers);
+

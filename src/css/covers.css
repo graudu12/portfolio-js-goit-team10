@@ -4,7 +4,11 @@
     height: 508px;
     min-width: 320px;
     background-color: var(--background);
-    background-image: url(../img/desktop/Covers-dsk.png);
+
+    background-image: url(./img/desktop/Covers-dsk.png);
+
+    background-image: url(./img/desktop/Covers-dsk.png);
+
     background-size: cover;
 }
 
@@ -22,7 +26,11 @@
 
 @media (min-resolution: 192dpi) {
     .covers {
-        background-image: url(../img/desktop/Covers-dsk@2x.png);
+
+        background-image: url(./img/desktop/Covers-dsk@2x.png);
+
+        background-image: url(./img/desktop/Covers-dsk@2x.png);
+
     }
 }
 
@@ -99,4 +107,6 @@
     .marquee__inner {
         gap: 64px;
     }
+
 }
+
