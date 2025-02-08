@@ -144,37 +144,49 @@
 @media (max-width: 768px) {
     .benefits {
         margin-bottom: 96px;
-       
         height: auto;
-        
+        /* Уменьшаем отступ снизу */
+        height: auto;
+        /* Секция растягивается под контент */
     }
 
     .benefits__content {
         flex-direction: column;
         align-items: center;
-       
+        /* Центрируем весь контент */
         height: auto;
     }
 
     .benefits__list {
         width: 100%;
-       
         justify-content: center;
         
+        /* Список занимает всю ширину */
+        justify-content: center;
+        /* Центрируем список */
     }
 
     .benefits__item {
         flex: 0 1 calc(50% - 10px);
-     
         height: auto;
         
+        /* Две карточки в строку */
+        height: auto;
+        /* Высота карточек зависит от содержимого */
+
     }
 
     .benefits__btn {
         margin-top: 40px;
+
        
         align-self: center;
       
+
+        /* Уменьшаем расстояние до кнопки */
+        align-self: center;
+        /* Кнопка остаётся по центру */
+
     }
 }
 
@@ -183,23 +195,32 @@
 /* Планшеты (768px и меньше) */
 @media (max-width: 768px) {
     .benefits {
-        height: auto;
-       
+        height: auto;     
+        /* Секция растягивается под контент */
+
     }
 
     .benefits__content {
         flex-direction: column;
         align-items: flex-start;
+
        
         height: auto;
-        
+
+        /* Список и заголовок выравниваются по левому краю */
+        height: auto;
+        /* Контент занимает всю высоту */
     }
 
     .benefits__list {
         width: 100%;
-        
+
         justify-content: flex-start;
-        
+       
+        /* Список занимает всю ширину */
+        justify-content: flex-start;
+        /* Карточки прижаты к левому краю */
+
     }
 
     .benefits__item {
@@ -207,13 +228,21 @@
         
         height: auto;
        
+        /* Карточки занимают всю ширину */
+        height: auto;
+        /* Высота карточек зависит от контента */
     }
 
     .benefits__btn {
         margin-top: 40px;
+
       
         align-self: flex-start;
-       
+
+        /* Уменьшаем расстояние до кнопки */
+        align-self: flex-start;
+        /* Кнопка прижимается к левому краю */
+
     }
 }
 
@@ -221,7 +250,8 @@
 @media (max-width: 375px) {
     .benefits {
         padding: 20px;
-        
+
+        /* Добавляем отступы */
 
     }
 
@@ -231,51 +261,89 @@
 @media (max-width: 375px) {
     .benefits {
         padding: 20px;
-       
+      
         margin-bottom: 64px;
-        
+
+        /* Добавляем отступы */
+        margin-bottom: 64px;
+        /* Уменьшаем отступ снизу */
+
     }
 
     .benefits__title {
         font-size: 20px;
+
         
+
+        /* Уменьшаем размер заголовка */
+
     }
 
     .benefits__list {
         flex-wrap: nowrap;
         flex-direction: column;
+
       
+
+        /* Карточки выстраиваются в столбик */
+
     }
 
     .benefits__item {
         flex: 0 1 100%;
+
        
         height: auto;
         
         padding: 15px;
         
+
+        /* Карточки занимают всю ширину */
+        height: auto;
+        /* Высота карточек зависит от содержимого */
+        padding: 15px;
+        /* Уменьшаем отступы внутри карточки */
+
     }
 
     .benefits__btn {
         margin-top: 20px;
+
         
+
+        /* Уменьшаем отступ до кнопки */
+
     }
 
     .benefits__title {
         font-size: 20px;
+
         
+
+        /* Уменьшаем размер заголовка */
+
     }
 
     .benefits__item {
         padding: 15px;
+
         
+
+        /* Уменьшаем отступы внутри карточки */
+
     }
 
     .benefits__btn {
 
         width: 100%;
+
       
         text-align: center;
         
+
+        /* Кнопка растягивается на всю ширину */
+        text-align: center;
+        /* Текст кнопки по центру */
+
     }
 }

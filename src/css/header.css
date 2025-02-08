@@ -8,21 +8,18 @@
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  
 }
 
-/* Логотип */
 .logo {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-/* Текст лого */
 .logo__text {
   position: absolute;
   top: 0;
-  right: -90px; /* Відступ праворуч, щоб текст не налазив на лого */
+  right: -90px;
   transform: scale(1.5);
 }
 
@@ -30,7 +27,6 @@
   height: 80px;
 }
 
-/* Меню контейнер */
 .menu-container {
   display: flex;
   flex-direction: column;
@@ -38,36 +34,27 @@
   position: relative;
 }
 
-/* Головне меню (десктоп) */
-
-/* Кнопка меню на десктопі */
-
-  /* Кнопка меню */
 .menu-toggle {
-    display: flex;
-    background: none;
-    border: none;
-    cursor: pointer;
+  display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
 
-font-weight: 500;
-font-size: 16px;
-letter-spacing: -0.02em;
-    
-color: var(--main-text);
-    position: relative;
-    text-decoration: underline; /* Підкреслення завжди */
-  }
-  
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
 
+  color: var(--main-text);
+  position: relative;
+  text-decoration: underline;
+}
 
-/* Десктопне меню з анімацією */
 .nav {
   display: flex;
   gap: 20px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0s 0.5s;
- 
 }
 
 .nav.active {
@@ -78,12 +65,12 @@ color: var(--main-text);
 
 .nav-list {
   display: flex;
+  margin-top: 15px;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   list-style: none;
   padding: 0;
-  
 }
 
 .nav-list li a {
@@ -92,7 +79,6 @@ color: var(--main-text);
   transition: color 0.3s ease;
 }
 
-/* Кнопка "Order the project" */
 .order-btn {
   background: #e0373f;
   color: white;
@@ -101,7 +87,6 @@ color: var(--main-text);
   padding: 18px 24px;
 }
 
-/* Бургер-меню (тільки мобільна версія) */
 .burger-menu {
   display: none;
   flex-direction: column;
@@ -117,25 +102,22 @@ color: var(--main-text);
   background: rgb(248, 246, 246);
 }
 
-/* Мобільне меню */
-
-    .mobile-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.9) url('/img/desktop/background-hero.png') no-repeat center center;
-        background-size: cover;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 1001;
-        padding: 20px;
-      }
-      
-
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9) url('/img/hero/hero1xmob.jpg') no-repeat center
+    center;
+  background-size: cover;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  padding: 20px;
+}
 
 .mobile-menu.active {
   display: flex;
@@ -156,7 +138,6 @@ color: var(--main-text);
   font-size: 18px;
 }
 
-/* Кнопка закриття мобільного меню */
 .close-menu {
   position: absolute;
   top: 20px;
@@ -168,7 +149,6 @@ color: var(--main-text);
   cursor: pointer;
 }
 
-/* Кнопка "Order the project" у мобільному меню */
 .order-btn-mobile {
   position: absolute;
   bottom: 40px;
@@ -180,20 +160,18 @@ color: var(--main-text);
   margin-bottom: 40px;
 }
 
-/* Загальні стилі для header */
 .header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
-  
+  z-index: 100;
+
   padding: 20px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-nav li {
-  list-style: none; /* Прибирає крапки перед списком */
+  list-style: none;
 }
 
 .mobile-nav a {
@@ -215,7 +193,49 @@ color: var(--main-text);
   background-color: white;
 }
 
-/* Медіа-запити для адаптації */
+.order-btn:hover,
+.order-btn:focus {
+  background: #f3eeee;
+  color: #e0373f;
+}
+
+.order-btn-mobile:hover,
+.order-btn-mobile:focus {
+  background: #f6f3f3;
+  color: #e0373f;
+}
+
+a {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: #e0373f;
+  text-decoration: underline;
+}
+
+.nav-list li a,
+.mobile-nav a {
+    
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus,
+.mobile-nav a:hover,
+.mobile-nav a:focus {
+  color: #e0373f;
+  
+}
+
+button,
+.menu-toggle,
+.order-btn,
+.order-btn-mobile {
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
 @media (max-width: 768px) {
   .nav {
     display: none;
