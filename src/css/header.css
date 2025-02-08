@@ -196,20 +196,28 @@
 .order-btn:hover,
 .order-btn:focus {
   background: #f3eeee;
+  color: #e0373f;
 }
 
 .order-btn-mobile:hover,
 .order-btn-mobile:focus {
   background: #f6f3f3;
+  color: #e0373f;
 }
 
 a {
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: #e0373f;
+  text-decoration: underline;
+}
 
 .nav-list li a,
 .mobile-nav a {
+    
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
@@ -218,7 +226,7 @@ a {
 .mobile-nav a:hover,
 .mobile-nav a:focus {
   color: #e0373f;
-  text-decoration: underline;
+  
 }
 
 button,
