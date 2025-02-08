@@ -58,7 +58,7 @@ const searchReviewsSection = document.querySelector('.js-reviews-section');
 const onScroll = async () => {
     
     try {
-        const response = await axios.get('https://portfolio-js.b.goit.study/api/review');
+        const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
         const data = response.data;
         
         if (!data || data.length === 0) {
