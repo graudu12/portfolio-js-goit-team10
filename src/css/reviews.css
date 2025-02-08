@@ -62,6 +62,10 @@
   padding: 32px 24px;
   max-width: 344px;
   min-height: 366px;
+  margin-right: 16px !important;
+}
+.swipe-review :last-child {
+  margin-right: 0px !important;
 }
 
 .reviews-author {
@@ -95,7 +99,10 @@
   gap: 12px;
   justify-content: center;
 }
-
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
 .swiper .swiper-button-prev::after,
 .swiper .swiper-button-next::after {
   display: none;
@@ -133,7 +140,8 @@
   pointer-events: none;
 }
 .arr-btn-review {
-  fill: #fafafa;
+  fill: none;
+  stroke: #fafafa;
 }
 
 .arr-btn-review.swiper-button-disabled {
