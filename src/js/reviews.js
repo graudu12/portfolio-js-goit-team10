@@ -2,7 +2,7 @@
 
 import iziToast from "izitoast";
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+/*import { Navigation, Pagination} from 'swiper/modules';*/
 import axios from 'axios';
 const swiperWrapper = document.querySelector(".wrap-card");
 console.log(swiperWrapper);
@@ -10,10 +10,24 @@ console.log(swiperWrapper);
 const loaderEl = document.querySelector('.loader');
 let galleryTemplate;
 
+import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 
 const swiper = new Swiper('.swiper-reviews', {
-    modules: [Navigation, Pagination],  
-    
+    modules: [Navigation, Pagination, Keyboard, Mousewheel],
+
+    // Управление клавиатурой
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,  // Позволяет листать даже если Swiper вне экрана
+        pageUpDown: true,       // Включает прокрутку PageUp/PageDown
+    },
+
+    // Управление мышью (скроллом)
+    mousewheel: {
+        invert: false, // Обычное направление прокрутки
+        forceToAxis: true, // Листает только по оси X или Y
+    },
+
     navigation: {
         nextEl: '.swiper-button-next-rev',
         prevEl: '.swiper-button-prev-rev',
@@ -23,26 +37,46 @@ const swiper = new Swiper('.swiper-reviews', {
         clickable: true,
             
     },
-    spaceBetween: 16,  
-    
-    slidesPerView: 1, 
+
+    // Сенсорное управление (по умолчанию включено)
+    simulateTouch: true,  // Включает сенсорные жесты на десктопе
+    touchRatio: 1,        // Чувствительность свайпа
+    touchAngle: 45,       // Угол свайпа (макс. угол перед отклонением)
+    grabCursor: true,     // Курсор в виде "руки" при свайпе
+
+    // Настройки для Tab и фокуса
+    a11y: { // Доступность
+        enabled: true,
+        prevSlideMessage: 'Предыдущий слайд',
+        nextSlideMessage: 'Следующий слайд',
+    },
+
+    loop: false,  // Отключаем бесконечную прокрутку
+    spaceBetween: 16,
+    slidesPerView: 1,
     breakpoints: {
-        768: { 
+        768: {
             slidesPerView: 2,
-            spaceBetween: 20
+            spaceBetween: 20,
         },
-       
-        1440: { 
+        1440: {
             slidesPerView: 4,
-            spaceBetween: 32
+            spaceBetween: 32,
         }
     },
-    keyboard: {
-        enabled: true,
-        pageUpDown: true,
-    },
-    loop: false,  
 });
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Tab') {
+    event.preventDefault(); // Зупиняємо прокрутку вниз
+
+    if (event.shiftKey) {
+      swiper.slidePrev(); // Shift + Tab — перемикання назад
+    } else {
+      swiper.slideNext(); // Tab — перемикання вперед
+    }
+  }
+});
+
 const showLoader = () => {
   loaderEl.style.display = 'block';
 };
