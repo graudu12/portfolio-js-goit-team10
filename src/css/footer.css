@@ -44,9 +44,9 @@
 .input-work-together-section {
   color: #fafafa;
   background-color: #1c1d20;
+  outline: none;
   border: none;
   border-bottom: 1px solid #fafafa33;
-  outline: none;
   padding: 18px 0;
   width: 100%;
   font-size: 16px;
@@ -71,20 +71,9 @@
 .input-work-together-section:invalid:not(:placeholder-shown) {
   border-bottom: 2px solid #e6533c;
 }
-/* input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px #1c1d20 inset !important;
-  -webkit-text-fill-color: #fafafa !important;
-  -webkit-outline: inherit !important;
-  -webkit-background-clip: padding-box !important;
-} */
-
 .input-work-together-section:focus,
 .input-work-together-section:hover,
 .input-work-together-section:active {
-
   border-bottom: 2px solid #fafafa;
   background-image: linear-gradient(
     to top,
@@ -92,6 +81,15 @@ input:-webkit-autofill:active {
     rgba(28, 29, 32, 0) 86%
   );
 }
+/* input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #1c1d20 inset !important;
+    -webkit-text-fill-color: #fafafa !important;
+    -webkit-outline: inherit !important;
+    -webkit-background-clip: padding-box !important;
+  } */
 .contact-form-btn {
   background-color: #e6533c;
   color: #fafafa;
