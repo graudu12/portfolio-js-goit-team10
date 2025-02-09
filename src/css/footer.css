@@ -111,8 +111,10 @@
   transform: scale(1.1);
   font-size: 18px;
 }
-.contact-info {
+.blok-address {
   margin-top: 64px;
+}
+.contact-info {
   display: flex;
   gap: 4px;
 }
@@ -175,9 +177,10 @@
     height: 150px;
     margin-top: 0;
   }
-
-  .contact-info {
+  .blok-address {
     margin-top: 18px;
+  }
+  .contact-info {
     gap: 8px;
   }
 
