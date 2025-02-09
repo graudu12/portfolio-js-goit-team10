@@ -31,7 +31,6 @@
   padding: 32px;
   text-align: left;
   background-color: var(--color-text);
-  border-radius: 24px 24px 0 0;
 }
 
 .technologies-list {
@@ -97,7 +96,6 @@
 .projects-list-image-container {
   padding: 100px 16px;
   background-color: var(--bgr-card-prj);
-  border-radius: 0 0 24px 24px;
 }
 
 .projects-swiper-navigation {
@@ -122,14 +120,19 @@
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.6s ease, transform 0.5s ease;
+  --color1: rgba(250, 250, 250, 1);
 }
 
 .projects-swiper-button-prev:hover,
 .projects-swiper-button-next:hover,
 .projects-swiper-button-prev:focus,
 .projects-swiper-button-next:focus {
-  box-shadow: 0 8px 16px rgba(230, 67, 60, 0.8);
-  transform: scale(1.1);
+  box-shadow: inset 0 -8px 16px rgba(230, 67, 60, 0.8);
+}
+
+.projects-swiper-navigation svg {
+  width: 24px;
+  height: 24px;
 }
 
 .arrow-button-left {
@@ -194,6 +197,11 @@
     width: 68px;
     height: 68px;
     padding: 18px;
+  }
+
+  .projects-swiper-navigation svg {
+    width: 32px;
+    height: 32px;
   }
 
   .projects-section {
