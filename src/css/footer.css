@@ -135,8 +135,8 @@
 .contact-info-item:focus,
 .contact-info-item:active {
   border-color: #fafafa;
-  box-shadow: 1px 8px 10px 1px #e0373f;
-  color: #e0373f;
+  box-shadow: 1px 8px 10px 1px #e6433ccc;
+  color: #e6433ccc;
 }
 
 /* ----------========== tablet ==========---------- */
