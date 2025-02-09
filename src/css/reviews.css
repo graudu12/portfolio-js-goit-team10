@@ -5,8 +5,8 @@
 @import 'swiper/css/pagination';
 
 .loader {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   border: 5px solid #fafafa;
   border-bottom-color: #e6533c;
   border-radius: 50%;
@@ -25,11 +25,12 @@
 }
 
 .reviews-section {
-  padding: 64px 16px;
+  padding-bottom: 64px;
+  padding-top: 64px;
 }
 .reviews-title {
   margin-left: 0;
-  margin: top 0;
+  margin-top: 0;
   font-weight: 600;
 
   line-height: 1.5;
@@ -37,8 +38,17 @@
   color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
 }
+.error-title {
+  background: linear-gradient(90deg, #1c1d20 20%, #9f3626 80.73%, #e6533c 100%);
+
+  text-align: center;
+  font-size: 32px;
+}
 .wrap-card {
   margin-bottom: 32px;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
 }
 
 .review-img {
@@ -52,6 +62,11 @@
   border-radius: 20px;
   padding: 32px 24px;
   width: 344px;
+  min-height: 366px;
+  transition: box-shadow 0.6s ease;
+}
+.swipe-review:hover {
+  box-shadow: 0 8px 16px rgba(230, 67, 60, 0.8);
 }
 .reviews-author {
   font-weight: 600;
@@ -64,13 +79,19 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
 }
-.swiper-pagination-rev {
-  margin-bottom: 50px;
-}
+
 .btn-rev-wraper {
   display: flex;
   gap: 12px;
   justify-content: center;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  display: none;
 }
 .swiper-button-prev-rev,
 .swiper-button-next-rev {
@@ -82,7 +103,20 @@
   align-items: center;
   justify-content: center;
   background: transparent;
-  transition: all 0.3s ease;
+  position: static;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.6s ease, transform 0.5s ease;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 14px;
+  z-index: 20;
+}
+.swiper-button-prev-rev:hover,
+.swiper-button-next-rev:hover,
+.swiper-button-prev-rev:focus,
+.swiper-button-next-rev:focus {
+  box-shadow: 0 8px 16px rgba(230, 67, 60, 0.8);
+  transform: scale(1.1);
 }
 
 .swiper-button-prev-rev.swiper-button-disabled,
@@ -92,15 +126,38 @@
   pointer-events: none;
 }
 .arr-btn-review {
-  fill: none;
-  stroke: #fafafa;
-  width: 24px;
-  height: 24px;
+  --color1: #fafafa;
 }
 
 .arr-btn-review.swiper-button-disabled {
-  fill: none;
-  stroke: #3b3b3b;
+  fill: #3b3b3b;
   pointer-events: none;
   opacity: 0.5;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .reviews-section {
+    padding-bottom: 96px;
+    padding-top: 96px;
+  }
+
+  .btn-rev-wraper {
+    gap: 20px;
+  }
+
+  .swiper-button-prev-rev,
+  .swiper-button-next-rev {
+    width: 68px;
+    height: 68px;
+    border-radius: 60%;
+    padding: 18px;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .reviews-section {
+    padding-bottom: 164px;
+    padding-top: 164px;
+  }
 }

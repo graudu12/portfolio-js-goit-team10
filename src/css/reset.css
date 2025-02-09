@@ -36,3 +36,6 @@ img {
 html {
   scroll-behavior: smooth;
 }
+address {
+  font-style: inherit;
+}

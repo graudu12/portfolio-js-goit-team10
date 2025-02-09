@@ -1,21 +1,31 @@
 <!-- reviews-section LENA BOKHAN-->
-<section class="container reviews-section js-reviews-section">
-  <h1 class="reviews-title">REVIEWS</h1>
-  <div class="loader"></div>
-  <div class="swiper swiper-reviews">
-    <ul class="swiper-wrapper wrap-card"></ul>
-    <div class="swiper-pagination swiper-pagination-rev"></div>
-    <div class="btn-rev-wraper">
-      <button class="swiper-button-prev swiper-button-prev-rev" type="button">
-        <svg class="arr-btn-review">
-          <use href="./img/icon/symbol-defs.svg#icon-arrow-left"></use>
-        </svg>
-      </button>
-      <button class="swiper-button-next swiper-button-next-rev" type="button">
-        <svg class="arr-btn-review">
-          <use href="./img/icon/symbol-defs.svg#icon-arrow-narrow-right"></use>
-        </svg>
-      </button>
+<section class="reviews-section js-reviews-section">
+  <div class="container">
+    <h1 class="reviews-title">REVIEWS</h1>
+    <div class="loader"></div>
+    <div class="swiper swiper-reviews" tabindex="0">
+      <ul class="swiper-wrapper wrap-card"></ul>
+
+      <div class="btn-rev-wraper">
+        <button
+          class="swiper-button-prev swiper-button-prev-rev"
+          tabindex="0"
+          type="button"
+        >
+          <svg class="arr-btn-review" style="transform: rotate(180deg)">
+            <use
+              href="./img/icon/symbol-defs.svg#icon-arrow-narrow-right"
+            ></use>
+          </svg>
+        </button>
+        <button class="swiper-button-next swiper-button-next-rev" type="button">
+          <svg class="arr-btn-review">
+            <use
+              href="./img/icon/symbol-defs.svg#icon-arrow-narrow-right"
+            ></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>

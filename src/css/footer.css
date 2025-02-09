@@ -14,7 +14,7 @@
   right: -74px;
   height: 560px;
   width: 170px;
-  background-image: url('./img/desktop/background-last-section-mob.png');
+  background-image: url('../img/desktop/background-last-section-mob.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,46 +41,55 @@
   justify-content: flex-start;
   flex-direction: column;
 }
-.input-last-section {
+.input-work-together-section {
   color: #fafafa;
   background-color: #1c1d20;
+  outline: none;
   border: none;
   border-bottom: 1px solid #fafafa33;
-  outline: none;
   padding: 18px 0;
   width: 100%;
   font-size: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: border-bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 0.8s ease-in-out;
 }
-.input-last-section::placeholder {
+.input-work-together-section::placeholder {
   color: #fafafa99;
 }
 
-.input-last-section:focus {
+.input-work-together-section:focus {
   border-bottom: 2px solid #fafafa80;
   box-shadow: none;
   background-color: transparent;
 }
-.input-last-section:valid {
+.input-work-together-section:valid {
   background-color: transparent;
   border-bottom: 2px solid #3cbc81;
 }
-.input-last-section:invalid:not(:placeholder-shown) {
+.input-work-together-section:invalid:not(:placeholder-shown) {
   border-bottom: 2px solid #e6533c;
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px #1c1d20 inset !important;
-  -webkit-text-fill-color: #fafafa !important;
+.input-work-together-section:focus,
+.input-work-together-section:hover,
+.input-work-together-section:active {
+  border-bottom: 2px solid #fafafa;
+  background-image: linear-gradient(
+    to top,
+    rgba(250, 250, 250, 0.1) 9%,
+    rgba(28, 29, 32, 0) 86%
+  );
 }
-.input-last-section:focus,
-.input-last-section:hover,
-.input-last-section:active {
-  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); */
-}
+/* input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #1c1d20 inset !important;
+    -webkit-text-fill-color: #fafafa !important;
+    -webkit-outline: inherit !important;
+    -webkit-background-clip: padding-box !important;
+  } */
 .contact-form-btn {
   background-color: #e6533c;
   color: #fafafa;
@@ -102,8 +111,10 @@ input:-webkit-autofill:active {
   transform: scale(1.1);
   font-size: 18px;
 }
-.contact-info {
+.blok-address {
   margin-top: 64px;
+}
+.contact-info {
   display: flex;
   gap: 4px;
 }
@@ -113,8 +124,9 @@ input:-webkit-autofill:active {
   border: 1px solid #fafafa33;
   border-radius: 60px;
   padding: 10px 12px;
-  transition: border, box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: 340px) {
     font-size: 14px;
   }
@@ -122,8 +134,9 @@ input:-webkit-autofill:active {
 .contact-info-item:hover,
 .contact-info-item:focus,
 .contact-info-item:active {
-  border: 1px solid #fafafa;
-  box-shadow: 1px 8px 10px 1px #e0373f;
+  border-color: #fafafa;
+  box-shadow: 1px 8px 10px 1px #e6433ccc;
+  color: #e6433ccc;
 }
 
 /* ----------========== tablet ==========---------- */
@@ -139,7 +152,7 @@ input:-webkit-autofill:active {
     right: -18px;
     height: 630px;
     width: 250px;
-    background-image: url('./img/desktop/background-last-section-tab.png');
+    background-image: url('../img/desktop/background-last-section-tab.png');
   }
   .work-together-logo {
     width: 70px;
@@ -155,7 +168,7 @@ input:-webkit-autofill:active {
     align-items: center;
     gap: 32px;
   }
-  .input-last-section {
+  .input-work-together-section {
     padding: 20px 0;
     max-width: 245px;
   }
@@ -164,20 +177,10 @@ input:-webkit-autofill:active {
     height: 150px;
     margin-top: 0;
   }
-
-  .btn-background-decor {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: -100px;
-    height: 100%;
-    width: 200px;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    opacity: 1;
+  .blok-address {
+    margin-top: 18px;
   }
   .contact-info {
-    margin-top: 18px;
     gap: 8px;
   }
 
@@ -198,9 +201,9 @@ input:-webkit-autofill:active {
     right: 0;
     height: 680px;
     width: 420px;
-    background-image: url('./img/desktop/background-last-section-desktop.png');
+    background-image: url('../img/desktop/background-last-section-desktop.png');
   }
-  .input-last-section {
+  .input-work-together-section {
     max-width: 390px;
   }
   .contact-form-btn {

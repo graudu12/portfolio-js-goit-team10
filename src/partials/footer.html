@@ -1,6 +1,6 @@
 <!--============== Work together section (footer) ============== -->
 
-<section class="work-together-section" id="work-together">
+<footer class="work-together-section" id="work-together">
   <div class="container">
     <h2 class="work-together-section-title">
       <img
@@ -11,9 +11,11 @@
       Let’s <span class="them-color">work</span> together
     </h2>
 
-    <form class="contact-form" id="contactForm">
+    <!-- form -->
+
+    <form class="contact-form" id="contactForm" autocomplete="off">
       <input
-        class="input-last-section"
+        class="input-work-together-section"
         type="email"
         id="email"
         name="email"
@@ -24,7 +26,7 @@
         aria-label="Email address"
       />
       <input
-        class="input-last-section"
+        class="input-work-together-section"
         type="text"
         id="comments"
         name="comments"
@@ -37,9 +39,17 @@
 
     <!-- contact-info -->
 
-    <div class="contact-info">
-      <a class="contact-info-item" href="#">lloydjefferson@gmail.com</a>
-      <a class="contact-info-item" href="#">+380 11 1111 11 11</a>
-    </div>
+    <address class="blok-address">
+      <ul class="contact-info">
+        <li class="contact-info-item">
+          <a href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+        </li>
+        <li class="contact-info-item">
+          <a href="tel:+3801111111111">+380 11 1111 11 11</a>
+        </li>
+      </ul>
+    </address>
   </div>
-</section>
+</footer>
+
+<!--============== Work together section (footer) ============== -->
