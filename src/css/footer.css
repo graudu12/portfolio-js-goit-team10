@@ -176,17 +176,6 @@
     margin-top: 0;
   }
 
-  .btn-background-decor {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: -100px;
-    height: 100%;
-    width: 200px;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    opacity: 1;
-  }
   .contact-info {
     margin-top: 18px;
     gap: 8px;
