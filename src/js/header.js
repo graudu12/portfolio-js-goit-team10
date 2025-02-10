@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileLinks = document.querySelectorAll('.mobile-nav a');
     const desktopLinks = document.querySelectorAll('.nav-list a');
     const orderBtnMobile = document.querySelector('.order-btn-mobile');
-    const containerHeader = document.querySelector('.container-header');
+   
 
 
     
