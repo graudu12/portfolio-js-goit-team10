@@ -1,1 +1,1 @@
-comments:runnp build!
+comments:npm run build!
