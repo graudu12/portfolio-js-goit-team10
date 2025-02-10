@@ -7,8 +7,6 @@
   justify-content: space-between;
   margin: 0 auto;
   position: relative;
-  max-height: 80px;
-  
 }
 
 .header {
@@ -22,16 +20,21 @@
 
 
 .logo {
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .logo__text {
   position: absolute;
   top: 0;
-  right: -90px;
-  transform: scale(1.5);
+  right: -110px;
+  overflow: visible;
+}
+
+.logo__text use {
+  transform: scale(2.08, 1.81); /* 84 / 40.4 = 2.08, 19 / 10.5 = 1.81 */
+  transform-origin: center;
 }
 
 .logo img {
@@ -43,34 +46,33 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+ 
 }
 
 .menu-toggle {
-  display: flex;
-  background: none;
-  border: none;
+  letter-spacing: -.02em;
+  padding-top: 10px;
   cursor: pointer;
-
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.02em;
-  position: relative;
   text-decoration: underline;
 }
-
 .nav {
-  display: flex;
-  gap: 20px;
+  height: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0s 0.5s;
+  overflow: hidden;
+  transition: height 0.5s ease, opacity 0.5s ease, visibility 0s 0.5s;
 }
 
+
 .nav.active {
+  height: auto; 
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease;
+  overflow: visible;
+  transition: height 0.5s ease, opacity 0.5s ease;
 }
+
+
 
 .nav-list {
   display: flex;
@@ -136,7 +138,7 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-body.menu-active .content {
+body.menu-active .container-header {
   pointer-events: none;
 }
 
