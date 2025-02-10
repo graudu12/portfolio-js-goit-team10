@@ -20,6 +20,8 @@
     overflow: hidden;
      background-image: url(../img/desktop/Covers-dsk.png);
     background-image: url(../img/desktop/Covers-dsk.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media (min-resolution: 192dpi) {
