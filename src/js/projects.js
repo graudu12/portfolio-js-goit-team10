@@ -30,12 +30,3 @@ document.addEventListener('keydown', function (event) {
     }
   }
 });
-
-document
-  .querySelector('.projects-button')
-  .addEventListener('click', function () {
-    window.open(
-      'https://github.com/graudu12/portfolio-js-goit-team10',
-      '_blank'
-    );
-  });
