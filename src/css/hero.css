@@ -478,7 +478,6 @@ height: 19px;
 
 @media screen and (min-width: 1440px) {
 .div-section {
-max-width: 100%;
 padding-left: 146px;
 background-image: url('../img/hero/Herodecktop2x.jpg');
 }
