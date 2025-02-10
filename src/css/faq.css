@@ -71,9 +71,6 @@
 
 .faq-section {
   padding-bottom: 164px;
-  max-width: 1440px;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 
 .faq-li-left {
@@ -161,7 +158,7 @@
     margin-left: 16px;
     margin-right: 16px;
   }
-
+  
   .faq-container-right {
     margin: 0;
   }
