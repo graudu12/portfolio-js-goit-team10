@@ -5,6 +5,19 @@ import 'izitoast/dist/css/iziToast.min.css';
 const form = document.querySelector('.contact-form');
 const emailInput = document.getElementById('email');
 const commentsInput = document.getElementById('comments');
+const emailMessage = document.getElementById('message');
+
+if (emailInput && emailMessage) {
+  emailInput.addEventListener('input', () => {
+    if (emailInput.checkValidity()) {
+      emailMessage.textContent = 'Succes!';
+      emailMessage.style.color = '#3cbc81';
+    } else {
+      emailMessage.textContent = 'Invalid email, try again';
+      emailMessage.style.color = '#e74a3b';
+    }
+  });
+}
 
 form.addEventListener('submit', event => {
   event.preventDefault();
