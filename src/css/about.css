@@ -3,8 +3,8 @@
 
 /* DESCRIPTION STYLES */
 .about {
-    margin-top: 64px;
-margin-bottom: 64px;}
+    padding-top: 64px;
+padding-bottom: 64px;}
 
 .about-me-description-wrapper {
     border-radius: 24px;
@@ -353,7 +353,7 @@ margin-bottom: 64px;}
     margin-left: 0;
     margin-right: 0;
   }
-  .swiper-slide-active {
+  .about-swiper-slide-active {
     background-color: #ed3b44;
   }
   
