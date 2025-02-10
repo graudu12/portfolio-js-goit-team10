@@ -41,3 +41,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     new Accordion(".accordion-container");
 });
+// запушся плиз
