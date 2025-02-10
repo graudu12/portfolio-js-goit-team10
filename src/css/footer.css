@@ -10,10 +10,10 @@
 .work-together-section .container::after {
   content: '';
   position: absolute;
-  top: 0px;
-  right: -74px;
+  top: 0;
+  right: 0;
   height: 560px;
-  width: 170px;
+  width: 80px;
   background-image: url('../img/desktop/background-last-section-mob.png');
   background-size: contain;
   background-position: center;
@@ -81,15 +81,15 @@
     rgba(28, 29, 32, 0) 86%
   );
 }
-/* input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 1000px #1c1d20 inset !important;
-    -webkit-text-fill-color: #fafafa !important;
-    -webkit-outline: inherit !important;
-    -webkit-background-clip: padding-box !important;
-  } */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #1c1d20 inset !important;
+  -webkit-text-fill-color: #fafafa !important;
+  -webkit-outline: inherit !important;
+  -webkit-background-clip: padding-box !important;
+}
 .contact-form-btn {
   background-color: #e6533c;
   color: #fafafa;
@@ -148,10 +148,10 @@
     padding-bottom: 169px;
   }
   .work-together-section .container::after {
-    top: -74px;
-    right: -18px;
+    top: -70px;
+    right: 0px;
     height: 630px;
-    width: 250px;
+    width: 220px;
     background-image: url('../img/desktop/background-last-section-tab.png');
   }
   .work-together-logo {

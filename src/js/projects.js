@@ -12,19 +12,10 @@ const projectSwiper = new Swiper('.swiper-projects', {
     disabledClass: 'projects-swiper-button-disabled',
   },
   allowTouchMove: true,
+  grabCursor: true,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
-  },
-  breakpoints: {
-    768: {
-      // Для планшетів
-      slidesPerView: 1,
-    },
-    1440: {
-      // Для десктопів
-      slidesPerView: 1,
-    },
   },
 });
 
