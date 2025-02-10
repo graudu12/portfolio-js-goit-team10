@@ -1,1 +1,1 @@
-comments: build!
+comments:run build!
