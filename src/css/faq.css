@@ -7,7 +7,6 @@
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  width: 485px;
 }
 
 .answer-text {
@@ -72,8 +71,6 @@
 .faq-section {
   padding-bottom: 164px;
   max-width: 1440px;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 
 .faq-li-left {
@@ -99,16 +96,16 @@
 
 @media (min-width: 320px) and (max-width: 374px) {
   .question-text {
+    text-align: left;
     width: 100%;
     font-size: 18px;
     margin-right: 0;
-    text-align: center;
   }
 
   .answer-text {
+    text-align: left;
     margin-right: 0;
     font-size: 14px;
-    text-align: center;
   }
 
   .faq-list {
@@ -120,7 +117,6 @@
   }
 
   .main-text {
-    text-align: center;
     font-size: 14px;
     margin-left: 0;
   }
@@ -128,10 +124,12 @@
   .faq-section {
     padding-left: 16px;
     padding-right: 16px;
+    margin: 0 auto;
+    max-width: 343px;
   }
 
   .faq-container-right {
-    margin-left: 0;
+    margin: 0;
   }
 
   .faq-li-left,
@@ -150,16 +148,11 @@
   .faq-li-right {
     border-left: none;
     border-right: none;
-    padding: 0;
-  }
-
-  .main-text {
-    margin-left: 16px;
   }
 
   .faq-section {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin: 0 auto;
+    max-width: 343px;
   }
 
   .faq-container-right {
@@ -181,5 +174,10 @@
 
   .faq-container-right {
     margin: 0;
+  }
+
+  .faq-section {
+    margin: 0 auto;
+    max-width: 704px;
   }
 }

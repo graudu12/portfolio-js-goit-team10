@@ -3,13 +3,8 @@
     overflow: hidden;
     height: 508px;
     min-width: 320px;
-    background-color: var(--background);
-
-    background-image: url(./img/desktop/Covers-dsk.png);
-
-    background-image: url(./img/desktop/Covers-dsk.png);
-
-    background-size: cover;
+    background-color: var(--background);                  
+   
 }
 
 .marquee {
@@ -22,14 +17,19 @@
     gap: 24px;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+     background-image: url(../img/desktop/Covers-dsk.png);
+    background-image: url(../img/desktop/Covers-dsk.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media (min-resolution: 192dpi) {
     .covers {
 
-        background-image: url(./img/desktop/Covers-dsk@2x.png);
+        background-image: url(../img/desktop/Covers-dsk@2x.png);
 
-        background-image: url(./img/desktop/Covers-dsk@2x.png);
+        background-image: url(../img/desktop/Covers-dsk@2x.png);
 
     }
 }
@@ -37,7 +37,8 @@
 .marquee__inner {
     display: flex;
     gap: 24px;
-    transform: rotate(-16deg);
+    animation: marquee 10s linear infinite;
+    transform: rotate(16deg);
 }
 
 .marquee-wrapper {
