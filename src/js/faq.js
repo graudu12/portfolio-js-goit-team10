@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         content.style.paddingTop = "0";
                         content.style.paddingBottom = "0";
                     } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.maxHeight = content.scrollHeight + 50 + "px";
                         content.style.paddingTop = "10px";
                         content.style.paddingBottom = "10px";
                     }
