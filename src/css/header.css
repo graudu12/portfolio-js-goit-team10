@@ -1,14 +1,7 @@
-
-
-
 .container-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 0 auto;
-  position: relative;
-  max-height: 80px;
-  
 }
 
 .header {
@@ -20,18 +13,16 @@
   padding: 32px 0;
 }
 
-
 .logo {
-  position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .logo__text {
-  position: absolute;
-  top: 0;
-  right: -90px;
-  transform: scale(1.5);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-left: 8px;
 }
 
 .logo img {
@@ -46,30 +37,25 @@
 }
 
 .menu-toggle {
-  display: flex;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  font-weight: 500;
-  font-size: 16px;
   letter-spacing: -0.02em;
-  position: relative;
+  padding-top: 10px;
+  cursor: pointer;
   text-decoration: underline;
 }
-
 .nav {
-  display: flex;
-  gap: 20px;
+  height: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0s 0.5s;
+  overflow: hidden;
+  transition: height 0.5s ease, opacity 0.5s ease, visibility 0s 0.5s;
 }
 
 .nav.active {
+  height: auto;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease;
+  overflow: visible;
+  transition: height 0.5s ease, opacity 0.5s ease;
 }
 
 .nav-list {
@@ -110,12 +96,13 @@
 }
 
 .mobile-menu {
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; 
-  background: rgba(0, 0, 0, 0.9) url('/img/hero/hero1xmob.jpg') no-repeat center center;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9) url('/img/hero/hero1xmob.jpg') no-repeat center
+    center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -128,7 +115,6 @@
   transition: transform 0.5s ease, opacity 0.5s ease, visibility 0s 0.5s;
 }
 
-
 .mobile-menu.active {
   visibility: visible;
   opacity: 1;
@@ -136,19 +122,17 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-body.menu-active .content {
+body.menu-active .container-header {
   pointer-events: none;
 }
 
 body.menu-active .mobile-menu {
-  pointer-events: auto; 
+  pointer-events: auto;
 }
-
 
 body.menu-active {
-  overflow: hidden; 
+  overflow: hidden;
 }
-
 
 .mobile-nav {
   display: flex;
@@ -186,8 +170,6 @@ body.menu-active {
   border-radius: 30px;
   margin-bottom: 40px;
 }
-
-
 
 .mobile-nav li {
   list-style: none;
