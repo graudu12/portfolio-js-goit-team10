@@ -7,10 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileLinks = document.querySelectorAll('.mobile-nav a');
     const desktopLinks = document.querySelectorAll('.nav-list a');
     const orderBtnMobile = document.querySelector('.order-btn-mobile');
-   
 
-
-    
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('active');
     });
@@ -25,21 +22,34 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.remove('menu-active');
     });
 
-    mobileLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-            mobileMenu.classList.remove('active');
-            document.body.classList.remove('menu-active');
-        });
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('menu-active');
+    }
+
+    function smoothScroll(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href'); 
+        const targetElement = document.querySelector(targetId); 
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+        closeMobileMenu(); 
+    }
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', smoothScroll);
+    });
+
+    desktopLinks.forEach(link => {
+        link.addEventListener('click', smoothScroll);
     });
 
     orderBtnMobile.addEventListener('click', function () {
-        mobileMenu.classList.remove('active');
-        document.body.classList.remove('menu-active');
-    });
-
-    desktopLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-            nav.classList.remove('active');
-        });
+        closeMobileMenu();
     });
 });
