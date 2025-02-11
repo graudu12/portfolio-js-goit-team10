@@ -9,6 +9,13 @@ const emailMessage = document.getElementById('message');
 
 if (emailInput && emailMessage) {
   emailInput.addEventListener('input', () => {
+    const value = emailInput.value.trim();
+
+    if (!value) {
+      emailMessage.textContent = '';
+      return;
+    }
+
     if (emailInput.checkValidity()) {
       emailMessage.textContent = 'Succes!';
       emailMessage.style.color = '#3cbc81';
