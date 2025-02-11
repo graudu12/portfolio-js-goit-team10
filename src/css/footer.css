@@ -90,6 +90,12 @@ input:-webkit-autofill:active {
   -webkit-outline: inherit !important;
   -webkit-background-clip: padding-box !important;
 }
+.result-message {
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  margin-top: 4px;
+}
 .contact-form-btn {
   background-color: #e6533c;
   color: #fafafa;
@@ -167,10 +173,16 @@ input:-webkit-autofill:active {
     flex-direction: row;
     align-items: center;
     gap: 32px;
+    position: relative;
   }
   .input-work-together-section {
     padding: 20px 0;
     max-width: 245px;
+  }
+  .result-message {
+    position: absolute;
+    top: 104px;
+    left: 0;
   }
   .contact-form-btn {
     width: 150px;
