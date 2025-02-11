@@ -1,4 +1,4 @@
-comments:
+comments: (EN)
 Jefferson's Portfolio Website
 Introduction
 
@@ -24,7 +24,7 @@ Conclusion
 Jefferson’s portfolio website is designed to leave a lasting impression on potential clients and employers. It effectively demonstrates his web development skills and creativity while offering a seamless user experience.
 Портфоліо вебсайту Джефферсона
 Вступ
-
+(UA)
 Ласкаво просимо до презентації портфоліо вебсайту Джефферсона – демонстрації його навичок, проєктів та експертизи у веброзробці. Цей проєкт був створений за допомогою HTML, CSS і JavaScript, що забезпечує сучасний, адаптивний і зручний інтерфейс.
 Огляд проєкту
 
