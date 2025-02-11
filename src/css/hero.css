@@ -1,5 +1,7 @@
 @media screen and (max-width: 374px) {
 .div-section {
+margin: 0 auto;
+padding: 0 16px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -195,11 +197,13 @@ justify-content: center;
 
 @media screen and (min-width: 375px) {
 .div-section {
+max-width: 375px;
+margin: 0 auto;
+padding: 0 16px;
 display: flex;
 flex-direction: column;
 padding-top: 281px;
 padding-bottom: 32px;
-min-width: 375px;
 height: 812px;
 background-color: #1C1D20;
 background-image: url('../img/hero/hero1xmob.jpg');
@@ -383,8 +387,9 @@ height: 17px;
 
 @media screen and (min-width: 768px) {
 .div-section {
+max-width: 768px;
+padding: 32px;
 padding-top: 300px;
-min-width: 768px;
 height: 1024px;
 background-image: url('../img/hero/tabl.jpg');
 background-size: 90% 100%;
@@ -478,7 +483,10 @@ height: 19px;
 
 @media screen and (min-width: 1440px) {
 .div-section {
-padding-left: 146px;
+max-width: 100%;
+height: 900px;
+padding-left: 178px;
+padding-right: 32px;
 background-image: url('../img/hero/Herodecktop2x.jpg');
 }
 .title {
@@ -487,6 +495,9 @@ height: 270px;
 }
 .section {
 padding-bottom: 96px;
+}
+.ul {
+margin-top: 243px;
 }
 }
 
