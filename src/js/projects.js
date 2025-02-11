@@ -18,15 +18,3 @@ const projectSwiper = new Swiper('.swiper-projects', {
     onlyInViewport: true,
   },
 });
-
-document.addEventListener('keydown', function (event) {
-  if (event.key === 'Tab') {
-    event.preventDefault(); // Зупиняємо прокрутку вниз
-
-    if (event.shiftKey) {
-      projectSwiper.slidePrev(); // Shift + Tab — перемикання назад
-    } else {
-      projectSwiper.slideNext(); // Tab — перемикання вперед
-    }
-  }
-});
