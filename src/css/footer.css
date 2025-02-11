@@ -14,7 +14,7 @@
   right: 0;
   height: 560px;
   width: 80px;
-  background-image: url('../img/desktop/background-last-section-mob.png');
+  background-image: url('../img/desktop/background-last-section-mob.webp');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -158,7 +158,7 @@ input:-webkit-autofill:active {
     right: 0px;
     height: 630px;
     width: 220px;
-    background-image: url('../img/desktop/background-last-section-tab.png');
+    background-image: url('../img/desktop/background-last-section-tab.webp');
   }
   .work-together-logo {
     width: 70px;
@@ -213,7 +213,7 @@ input:-webkit-autofill:active {
     right: 0;
     height: 680px;
     width: 420px;
-    background-image: url('../img/desktop/background-last-section-desktop.png');
+    background-image: url('../img/desktop/background-last-section-desktop.webp');
   }
   .input-work-together-section {
     max-width: 390px;
