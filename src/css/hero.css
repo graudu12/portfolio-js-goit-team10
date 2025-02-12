@@ -16,8 +16,11 @@
 }
 .list-hero {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 4px;
   margin-top: 212px;
+  cursor: pointer;
 }
 .list-item {
   display: flex;
@@ -64,8 +67,6 @@
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #fff;
-  width: 13px;
-  height: 17px;
 }
 .link:last-child {
   display: flex;
@@ -73,8 +74,6 @@
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #fff;
-  width: 154px;
-  height: 17px;
 }
 @media screen and (min-width: 768px) {
   .hero-section {
@@ -102,7 +101,7 @@
     box-shadow: 0 8px 16px #e6433ccc;
   }
   .list-item:last-child {
-    padding: 18px 24px;
+    padding: 18px 35px;
     width: 223px;
     height: 55px;
   }
@@ -110,6 +109,9 @@
     font-size: 16px;
     width: 15px;
     height: 19px;
+  }
+  .link:last-child {
+    width: 175px;
   }
 }
 @media screen and (min-width: 1440px) {
