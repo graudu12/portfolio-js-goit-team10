@@ -60,18 +60,12 @@ const swiper = new Swiper('.swiper-reviews', {
         }
     },
 });
-document.addEventListener('keydown', function (event) {
-  if (event.key === 'Tab') {
-    event.preventDefault(); // Зупиняємо прокрутку вниз
-
-    if (event.shiftKey) {
-      swiper.slidePrev(); // Shift + Tab — перемикання назад
-    } else {
-      swiper.slideNext(); // Tab — перемикання вперед
-    }
-  }
-});
-
+ // document.addEventListener('keydown', function (event) {
+//     if (event.key === 'Tab') {
+//         event.preventDefault();
+//         event.shiftKey ? swiper.slidePrev() : swiper.slideNext();
+//     }
+// });
 const showLoader = () => {
   loaderEl.style.display = 'block';
 };
