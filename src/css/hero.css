@@ -88,8 +88,7 @@
     height: 450px;
   }
   .list-hero {
-    margin-left: auto;
-    width: 473px;
+    justify-content: flex-end;
     gap: 8px;
     margin-top: 187px;
   }
