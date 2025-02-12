@@ -96,6 +96,7 @@ input:-webkit-autofill:active {
   letter-spacing: -0.02em;
   margin-top: 4px;
 }
+
 .contact-form-btn {
   background-color: #e6533c;
   color: #fafafa;
@@ -106,17 +107,19 @@ input:-webkit-autofill:active {
   border: none;
   outline: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow, background-color, font-size, transform 0.8s ease,
+  font-size: 16px;
+  transition: box-shadow 0.8s ease, background-color 0.8s ease,
     transform 0.5s ease;
 }
+
 .contact-form-btn:focus,
 .contact-form-btn:hover,
 .contact-form-btn:active {
   background-color: #cb4531;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
   transform: scale(1.1);
-  font-size: 18px;
 }
+
 .blok-address {
   margin-top: 64px;
 }
@@ -130,19 +133,9 @@ input:-webkit-autofill:active {
   border: 1px solid #fafafa33;
   border-radius: 60px;
   padding: 10px 12px;
-  transition: border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: 340px) {
     font-size: 14px;
   }
-}
-.contact-info-item:hover,
-.contact-info-item:focus,
-.contact-info-item:active {
-  border-color: #fafafa;
-  box-shadow: 1px 8px 10px 1px #e6433ccc;
-  color: #e6433ccc;
 }
 
 /* ----------========== tablet ==========---------- */
