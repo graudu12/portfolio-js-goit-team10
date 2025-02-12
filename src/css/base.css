@@ -63,9 +63,12 @@ main {
 }
 
 .black-button:hover,
-.black-button:focus,
-.black-button:active {
+.black-button:focus {
   transform: scale(1.03);
   border-color: #fafafa;
   box-shadow: 1px 8px 10px 1px #e6433ccc;
+}
+.black-button:active,
+.button-active-mob:active {
+  transform: scale(0.96);
 }
