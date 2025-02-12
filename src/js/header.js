@@ -18,13 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     closeMenu.addEventListener('click', function () {
-        mobileMenu.classList.remove('active');
-        document.body.classList.remove('menu-active');
+        closeMobileMenu();
     });
 
     function closeMobileMenu() {
         mobileMenu.classList.remove('active');
         document.body.classList.remove('menu-active');
+    }
+
+    function closeDesktopMenu() {
+        nav.classList.remove('active');
     }
 
     function smoothScroll(event) {
@@ -38,7 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 block: 'start',
             });
         }
-        closeMobileMenu(); 
+
+        if (window.innerWidth < 768) {
+            closeMobileMenu();
+        } else {
+            closeDesktopMenu();
+        }
     }
 
     mobileLinks.forEach(link => {
@@ -53,3 +61,4 @@ document.addEventListener('DOMContentLoaded', function () {
         closeMobileMenu();
     });
 });
+
