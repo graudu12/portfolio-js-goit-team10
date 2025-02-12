@@ -56,7 +56,6 @@
 .list-item:last-child:focus {
   box-shadow: 0 8px 16px #e6433ccc;
   border-color: #fafafa;
-
   transform: scale(1.03);
 }
 .link {
@@ -68,34 +67,7 @@
   width: 13px;
   height: 17px;
 }
-.link-two {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  letter-spacing: -0.02em;
-  color: #fff;
-  width: 16px;
-  height: 17px;
-}
-.link-three {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  letter-spacing: -0.02em;
-  color: #fff;
-  width: 18px;
-  height: 17px;
-}
-.link-four {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  letter-spacing: -0.02em;
-  color: #fff;
-  width: 20px;
-  height: 17px;
-}
-.link-five {
+.link:last-child {
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -104,7 +76,6 @@
   width: 154px;
   height: 17px;
 }
-
 @media screen and (min-width: 768px) {
   .hero-section {
     padding-top: 300px;
@@ -141,29 +112,7 @@
     width: 15px;
     height: 19px;
   }
-  .link-two {
-    font-size: 16px;
-    width: 19px;
-    height: 19px;
-  }
-  .link-three {
-    font-size: 16px;
-    width: 20px;
-    height: 19px;
-  }
-  .link-four {
-    font-size: 16px;
-    width: 23px;
-    height: 19px;
-  }
-  .link-five {
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    width: 175px;
-    height: 19px;
-  }
 }
-
 @media screen and (min-width: 1440px) {
   .div-container {
     padding-left: 178px;
@@ -172,10 +121,11 @@
     width: 1084px;
     height: 270px;
   }
-  .hero-section {
-    background-image: url('../img/hero/Herodecktop2x.jpg');
-  }
   .list-hero {
     margin-top: 243px;
   }
+  .hero-section {
+    background-image: url('../img/hero/Herodecktop2x.jpg');
+  }
+  
 }
