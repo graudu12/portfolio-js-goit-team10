@@ -35,7 +35,10 @@
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  max-width: 286px;
+  max-width: 270px;
+  @media screen and (max-width: 360px) {
+    max-width: 245px;
+  }
 }
 
 .ac-panel {
@@ -136,6 +139,10 @@
   }
   .answer-text {
     padding-bottom: 26px;
+  }
+
+  .faq-section {
+    padding-bottom: 164px;
   }
 }
 /* -------------------------========================== styles faq ================================-------------------------- */
