@@ -60,6 +60,9 @@ const swiper = new Swiper('.swiper-reviews', {
         }
     },
 });
+
+
+
  // document.addEventListener('keydown', function (event) {
 //     if (event.key === 'Tab') {
 //         event.preventDefault();
