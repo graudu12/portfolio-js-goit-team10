@@ -8,8 +8,7 @@
 
 .about-me-description-wrapper {
   border-radius: 24px;
-  height: 500px;
-  padding: 32px;
+  padding: 32px 32px 272px 32px;
   margin-bottom: 16px;
   background-color: #242527;
 }
@@ -48,9 +47,7 @@
   }
 
   .about-me-description-wrapper {
-    width: 704px;
-    height: 700px;
-    padding: 64px;
+    padding: 64px 64px 436px 64px;
   }
 
   .about-me-description {
@@ -74,11 +71,11 @@
   }
 
   .about-me-description-wrapper {
-    width: 680px;
-    height: 700px;
     margin-bottom: 0;
   }
-
+  .about-me-description {
+    max-width: 552px;
+  }
   .about-me-image {
     width: 680px;
     height: 700px;

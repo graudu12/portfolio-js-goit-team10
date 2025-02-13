@@ -135,7 +135,7 @@ input:-webkit-autofill:active {
   border: 1px solid #fafafa33;
   border-radius: 60px;
   padding: 10px 12px;
-  @media screen and (min-width: 340px) {
+  @media screen and (min-width: 350px) {
     font-size: 14px;
   }
 }
