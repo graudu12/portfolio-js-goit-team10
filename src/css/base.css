@@ -68,7 +68,7 @@ main {
   border-color: #fafafa;
   box-shadow: 1px 8px 10px 1px #e6433ccc;
 }
-.black-button:active,
+/* .black-button:active,
 .button-active-mob:active {
   transform: scale(0.96);
-}
+} */
