@@ -54,6 +54,7 @@ async function sendFormData(data) {
     if (response.status === 201) {
       showSuccessModal(response.data);
       form.reset();
+      emailMessage.textContent = '';
     }
   } catch (error) {
     handleError(error);
