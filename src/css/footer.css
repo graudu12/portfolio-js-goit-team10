@@ -113,13 +113,15 @@ input:-webkit-autofill:active {
 }
 
 .contact-form-btn:focus,
-.contact-form-btn:hover,
-.contact-form-btn:active {
+.contact-form-btn:hover {
   background-color: #cb4531;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
   transform: scale(1.1);
 }
 
+.contact-form-btn:active {
+  transform: scale(0.98);
+}
 .blok-address {
   margin-top: 64px;
 }
