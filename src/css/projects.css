@@ -18,19 +18,19 @@
   align-items: center;
   justify-content: center;
   border: none;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
 .swiper-projects {
   max-width: 343px;
   overflow: hidden;
-  padding-bottom: 64px;
 }
 
 .projects-list-item-container {
   padding: 32px;
   text-align: left;
   background-color: var(--color-text);
-  border-radius: 24px 24px 0 0;
 }
 
 .technologies-list {
@@ -71,8 +71,7 @@
 }
 
 .projects-button {
-  max-width: 141px;
-  height: 45px;
+  display: inline-block;
   padding: 13px 32px;
   border: none;
   border-radius: 60px;
@@ -83,20 +82,18 @@
   line-height: 19.36px;
   letter-spacing: -0.02em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.6s ease, transform 0.5s ease;
+  transition: box-shadow 0.6s ease;
 }
 
 .projects-button:focus,
 .projects-button:hover {
   background-color: #cb4531;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-  transform: scale(1.1);
 }
 
 .projects-list-image-container {
   padding: 100px 16px;
   background-color: var(--bgr-card-prj);
-  border-radius: 0 0 24px 24px;
 }
 
 .projects-swiper-navigation {
@@ -119,16 +116,21 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.6s ease, transform 0.5s ease;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.6s ease;
+  --color1: rgba(250, 250, 250, 1);
 }
 
 .projects-swiper-button-prev:hover,
 .projects-swiper-button-next:hover,
 .projects-swiper-button-prev:focus,
 .projects-swiper-button-next:focus {
-  box-shadow: 0 8px 16px rgba(230, 67, 60, 0.8);
-  transform: scale(1.1);
+  box-shadow: inset 0 -8px 16px rgba(230, 67, 60, 0.8);
+}
+
+.projects-swiper-navigation svg {
+  width: 24px;
+  height: 24px;
 }
 
 .arrow-button-left {
@@ -143,12 +145,14 @@
   --color1: rgba(59, 59, 59, 1);
 }
 
+.projects-section {
+  padding-bottom: 64px;
+}
 /* Styles for Tablet devices */
 
 @media only screen and (min-width: 768px) {
   .swiper-projects {
     max-width: 704px;
-    padding-bottom: 96px;
   }
 
   .projects-list-item-container {
@@ -172,7 +176,7 @@
   }
 
   .projects-button {
-    max-width: 177px;
+    width: 177px;
     height: 55px;
     padding: 18px 50px;
   }
@@ -192,8 +196,16 @@
     height: 68px;
     padding: 18px;
   }
-}
 
+  .projects-swiper-navigation svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .projects-section {
+    padding-bottom: 96px;
+  }
+}
 /* Styles for Desktop devices */
 
 @media only screen and (min-width: 1440px) {
@@ -203,7 +215,6 @@
 
   .swiper-projects {
     max-width: 1376px;
-    padding-bottom: 164px;
   }
 
   .projects-list-item-container {
@@ -218,5 +229,9 @@
   .projects-list-image-container {
     border-radius: 0 24px 24px 0;
     padding: 120px 37px;
+  }
+
+  .projects-section {
+    padding-bottom: 164px;
   }
 }
