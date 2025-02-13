@@ -32,7 +32,7 @@
 .about-me-image {
   border-radius: 24px;
   background-color: rgba(20, 20, 20, 0.3);
-  background: url('/img/mobile-dev-laptop-m.jpg');
+  background: url('/img/mobile/dev-laptop-m.jpg');
   margin-bottom: 32px;
   display: block;
   overflow: hidden;
