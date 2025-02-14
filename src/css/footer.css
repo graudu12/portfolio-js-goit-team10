@@ -129,7 +129,9 @@ input:-webkit-autofill:active {
   display: flex;
   gap: 4px;
 }
-.contact-info-item {
+
+.contact-info-link {
+  display: flex;
   letter-spacing: -0.02em;
   font-size: 13px;
   border: 1px solid #fafafa33;
@@ -137,9 +139,11 @@ input:-webkit-autofill:active {
   padding: 10px 12px;
   @media screen and (min-width: 350px) {
     font-size: 14px;
+    overflow: hidden;
   }
 }
-
+.contact-info-link {
+}
 /* ----------========== tablet ==========---------- */
 
 @media screen and (min-width: 768px) {
@@ -191,7 +195,7 @@ input:-webkit-autofill:active {
     gap: 8px;
   }
 
-  .contact-info-item {
+  .contact-info-link {
     padding: 18px 32px;
     font-size: 16px;
   }
@@ -216,7 +220,7 @@ input:-webkit-autofill:active {
   .contact-form-btn {
     margin-left: auto;
   }
-  .contact-info-item {
+  .contact-info-link {
     padding: 18px 32px;
     font-size: 16px;
   }

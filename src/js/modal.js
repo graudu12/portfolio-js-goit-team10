@@ -15,6 +15,9 @@
   });
   function toggleModal() {
     refs.modal.classList.toggle('is-open');
+    document.body.style.overflow =
+      document.body.style.overflow === 'hidden' ? '' : 'hidden';
+
     if (refs.modal.classList.contains('is-open')) {
       document.addEventListener('keydown', onEscPress);
     } else {
